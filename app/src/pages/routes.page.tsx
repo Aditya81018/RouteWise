@@ -5,6 +5,7 @@ import {
   type RouteOptionData,
 } from "../components/route-option-card"
 import { LoadingScreen } from "@/components/loading-screen"
+import { NavigateBack } from "@/components/navigate-back"
 
 // Grabs your base server url config from Vite's env layer
 const API_BASE_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:8000"
@@ -79,12 +80,15 @@ export default function RoutesPage() {
   }
 
   return (
-    <div className="mx-auto flex w-full max-w-md animate-in flex-col gap-4 bg-background p-4 pt-12 duration-300 fade-in">
-      {/* Dynamic Destination Sub-Header Summary */}
+    <div className="mx-auto flex w-full max-w-md animate-in flex-col gap-4 bg-background px-4 pt-8 duration-300 fade-in">
       <div className="mb-2 space-y-1 px-1">
-        <h2 className="text-2xl font-black tracking-tight text-foreground">
-          Available Rides
-        </h2>
+        <div className="flex items-end gap-2">
+          <NavigateBack to="/" />
+          <h2 className="text-2xl font-black tracking-tight text-foreground">
+            Available Rides
+          </h2>
+        </div>
+        {/* Dynamic Destination Sub-Header Summary */}
         <p className="text-xs font-bold tracking-wider text-muted-foreground/80 uppercase">
           {from} ➜ {to}
         </p>

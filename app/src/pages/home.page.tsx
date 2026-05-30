@@ -1,4 +1,5 @@
 import RoutePlannerCard from "@/components/route-planner-card"
+import { ModeToggle } from "@/components/theme-toggle"
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
           Plan your ride
         </h1>
       </div>
+      <ModeToggle />
 
       {/* --- ROUTE PLANNER CARD COMPONENT --- */}
       <RoutePlannerCard />

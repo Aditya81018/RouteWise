@@ -41,16 +41,6 @@ export function LoadingScreen({
             {message}
           </p>
         </div>
-
-        {/* --- SMOOTH PILL LOADER BAR --- */}
-        <div className="relative h-1.5 w-48 overflow-hidden rounded-full bg-secondary shadow-inner dark:bg-neutral-800">
-          <div
-            className={cn(
-              "absolute top-0 bottom-0 left-0 rounded-full bg-gradient-to-r from-[#5B93FF] to-[#3B82F6]",
-              "w-1/2 animate-[loading-bar_1.5s_infinite_ease-in-out]"
-            )}
-          />
-        </div>
       </div>
     </div>
   )

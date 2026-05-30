@@ -111,7 +111,7 @@ export function RouteOptionCard({
           <div
             className={cn(
               "mt-1 block text-xs font-bold",
-              isSelected && reliabilityScore >= 90
+              reliabilityScore >= 90
                 ? "text-green-600 dark:text-green-400"
                 : "text-muted-foreground"
             )}
