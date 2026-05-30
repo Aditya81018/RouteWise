@@ -6,16 +6,14 @@ from typing import List, Optional
 app = FastAPI()
 
 # --- CORS SETUP ---
-# Define which origins are allowed to make requests to this API.
-# Using ["*"] allows absolutely any website/domain to access your endpoints.
 origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["*"],  # Allows all HTTP methods (GET, POST, PUT, DELETE, etc.)
-    allow_headers=["*"],  # Allows all headers (Content-Type, Authorization, etc.)
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 # ------------------
 
@@ -28,15 +26,16 @@ def read_root():
 class BusRouteResponse(BaseModel):
     id: str
     busNo: str
+    # Added optional fields for transfer routes
+    nextBusNo: Optional[str] = None
+    transferStop: Optional[str] = None
     arrivalTime: str
     duration: str
     cost: int
     reliabilityScore: int
     isRecommended: bool
     crowdStatus: str
-    additionalInfo: Optional[str] = (
-        None  # Optional because the second item doesn't have it
-    )
+    additionalInfo: Optional[str] = None
 
 
 @app.get("/search-routes", response_model=List[BusRouteResponse])
@@ -46,18 +45,15 @@ def get_bus_routes(
 ):
     """
     Accepts 'from' and 'to' query parameters and returns available bus routes.
-    Example: /search-bus?from=Downtown&to=Uptown
+    Example: /search-routes?from=Downtown&to=Uptown
     """
-    # Note: Since 'from' is a reserved keyword in Python, we use 'origin'
-    # as the variable name and use Query(alias="from") so FastAPI maps it correctly.
-
     print(f"Received search request from '{origin}' to '{destination}'")
 
     # Fixed JSON payload
     fixed_data = [
         {
             "id": "bus-202a",
-            "busNo": "Bus 202A",
+            "busNo": "202A",
             "arrivalTime": "8:45 AM",
             "duration": "40 min",
             "cost": 15,
@@ -68,13 +64,27 @@ def get_bus_routes(
         },
         {
             "id": "bus-104",
-            "busNo": "Bus 104",
+            "busNo": "104",
             "arrivalTime": "8:35 AM",
             "duration": "40 min",
             "cost": 15,
             "reliabilityScore": 80,
             "isRecommended": False,
             "crowdStatus": "HIGH",
+        },
+        # --- NEW TRANSFER ROUTE ADDED HERE ---
+        {
+            "id": "route-transfer-1",
+            "busNo": "202A",
+            "nextBusNo": "30B",
+            "transferStop": "Rajabazar",
+            "arrivalTime": "8:45 AM",
+            "duration": "40 min",
+            "cost": 15,
+            "reliabilityScore": 96,
+            "isRecommended": True,
+            "crowdStatus": "MEDIUM",
+            "additionalInfo": "Will get crowded in 2 minutes",
         },
     ]
 

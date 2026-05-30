@@ -1,10 +1,12 @@
 import * as React from "react"
-import { Bus, ArrowUpRight, Info } from "lucide-react"
+import { Bus, ArrowUpRight, Info, ArrowRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 export interface RouteOptionData {
   id: string
   busNo: string
+  nextBusNo?: string // Optional second bus for transfers
+  transferStop?: string // Optional name of the connection spot
   arrivalTime: string
   duration: string
   cost: number | string
@@ -22,6 +24,8 @@ interface RouteOptionCardProps extends RouteOptionData {
 export function RouteOptionCard({
   id,
   busNo,
+  nextBusNo,
+  transferStop,
   arrivalTime,
   duration,
   cost,
@@ -32,19 +36,18 @@ export function RouteOptionCard({
   isSelected,
   onSelect,
 }: RouteOptionCardProps) {
-  // Custom theme configurations based on the crowd status enum
   const crowdConfig = {
     LOW: {
       bg: "bg-green-500/10 dark:bg-green-500/20",
       text: "text-green-600 dark:text-green-400",
       dot: "bg-green-500",
-      label: "Low Crowding",
+      label: "Less Crowded",
     },
     MEDIUM: {
       bg: "bg-amber-500/10 dark:bg-amber-500/20",
       text: "text-amber-600 dark:text-amber-400",
       dot: "bg-amber-500",
-      label: "Medium Crowding",
+      label: "Crowded",
     },
     HIGH: {
       bg: "bg-red-500/10 dark:bg-red-500/20",
@@ -55,7 +58,7 @@ export function RouteOptionCard({
   }[crowdStatus]
 
   const handleViewDirections = (e: React.MouseEvent) => {
-    e.stopPropagation() // Prevents triggering card selection when clicking directions button
+    e.stopPropagation()
     window.location.href = `/routes/${id}`
   }
 
@@ -63,12 +66,10 @@ export function RouteOptionCard({
     <div
       onClick={() => onSelect(id)}
       className={cn(
-        "relative flex w-full cursor-pointer flex-col gap-4 rounded-4xl border p-5 transition-all duration-300 select-none",
-
-        // Dynamic state mapping based on whether this card is currently selected
+        "relative flex w-full cursor-pointer flex-col gap-4 rounded-4xl border border-transparent p-5 transition-all duration-300 select-none",
         isSelected
-          ? "scale-[1.01] border-transparent bg-white opacity-100 shadow-xl shadow-black/5 dark:bg-zinc-900 dark:shadow-black/30"
-          : "border-transparent bg-secondary/40 text-foreground/70 opacity-60 hover:opacity-85 dark:bg-secondary/10"
+          ? "scale-[1.01] bg-white opacity-100 shadow-xl shadow-black/5 dark:bg-zinc-900 dark:shadow-black/30"
+          : "bg-secondary/40 text-foreground/70 opacity-60 hover:opacity-85 dark:bg-secondary/10"
       )}
     >
       {/* Recommended Pill Badge */}
@@ -92,17 +93,36 @@ export function RouteOptionCard({
           >
             <Bus className="size-6 stroke-[2.2]" />
           </div>
+
           <div className="space-y-0.5">
-            <h3 className="text-xl font-bold tracking-tight text-foreground">
-              {busNo}
-            </h3>
+            {/* Dynamic Title supporting inline transfers */}
+            <div className="flex flex-wrap items-center gap-1.5 text-xl font-bold tracking-tight text-foreground">
+              <span>{busNo}</span>
+              {nextBusNo && (
+                <>
+                  <ArrowRight className="size-4 stroke-3 text-muted-foreground/70" />
+                  <span>{nextBusNo}</span>
+                </>
+              )}
+            </div>
+
             <p className="text-xs font-semibold text-muted-foreground">
               Arrives {arrivalTime}
             </p>
+
+            {/* Transfer Sub-label Info Node */}
+            {transferStop && (
+              <p className="text-xs font-medium text-muted-foreground/80">
+                Change at{" "}
+                <span className="font-bold text-foreground/80">
+                  {transferStop}
+                </span>
+              </p>
+            )}
           </div>
         </div>
 
-        {/* Right Hand: Metrics (Duration, Pricing, Reliability) */}
+        {/* Right Hand: Metrics */}
         <div className="space-y-0.5 text-right">
           <div className="text-xl font-black tracking-tight text-foreground">
             {duration}
@@ -121,12 +141,12 @@ export function RouteOptionCard({
         </div>
       </div>
 
-      {/* Footer Meta Row (Crowd Badge & CTA trigger node) */}
+      {/* Footer Meta Row */}
       <div className="mt-1 flex items-center justify-between gap-4">
-        {/* Crowd Badge status box */}
+        {/* Crowd Badge */}
         <div
           className={cn(
-            "inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-extrabold tracking-wider uppercase",
+            "inline-flex items-center gap-2 rounded-full px-2 py-1 text-[0.625rem] font-extrabold tracking-wider uppercase",
             crowdConfig.bg,
             crowdConfig.text
           )}
@@ -150,9 +170,9 @@ export function RouteOptionCard({
         </button>
       </div>
 
-      {/* Conditional Extended Alert Details Banner */}
+      {/* Additional Alert Details Banner */}
       {additionalInfo && (
-        <div className="-m-2 flex animate-in items-center gap-2 border-t border-dashed border-border pt-3 pl-3 text-amber-600 duration-200 fade-in slide-in-from-top-1 dark:text-amber-400">
+        <div className="flex animate-in items-center gap-2 border-t border-dashed border-border pt-3 pl-1 text-amber-600 duration-200 fade-in slide-in-from-top-1 dark:text-amber-400">
           <Info className="size-4 shrink-0 stroke-[2.5]" />
           <p className="text-xs font-bold tracking-wide">{additionalInfo}</p>
         </div>
