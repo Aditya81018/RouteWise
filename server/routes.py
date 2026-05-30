@@ -7,7 +7,7 @@ def get_preferable_routes(point_a, point_b, filepath="busdata.json"):
         with open(filepath, "r", encoding="utf-8") as f:
             busdata = json.load(f)
     except FileNotFoundError:
-        return "Error: busdata.json not found."
+        return {"error": "Error: busdata.json not found."}
 
     # 1. Alias Resolution: Normalize the input points
     aliases = busdata.get("aliases", {})
@@ -19,7 +19,6 @@ def get_preferable_routes(point_a, point_b, filepath="busdata.json"):
     end = canon(point_b)
 
     # 2. Build Stop to Route Mapping
-    # Structure: { "StopName": [(route_index, stop_index_in_route), ...] }
     stop_to_routes = {}
     routes = busdata.get("routes", [])
 
@@ -43,7 +42,6 @@ def get_preferable_routes(point_a, point_b, filepath="busdata.json"):
     # 3. Search for Direct Routes
     for r1_idx, start_idx in start_routes:
         for r2_idx, end_idx in end_routes:
-            # Must be the exact same route, and 'start' must come before 'end' physically
             if r1_idx == r2_idx and start_idx < end_idx:
                 route = routes[r1_idx]
                 direct_routes.append(
@@ -59,22 +57,19 @@ def get_preferable_routes(point_a, point_b, filepath="busdata.json"):
     for r1_idx, start_idx in start_routes:
         for r2_idx, end_idx in end_routes:
             if r1_idx == r2_idx:
-                continue  # Skip because it is already a direct route
+                continue
 
-            # Find stops strictly AFTER 'start' in route 1
             r1_subsequent = {
                 stop: idx
                 for idx, stop in enumerate(routes[r1_idx]["stops"])
                 if idx > start_idx
             }
-            # Find stops strictly BEFORE 'end' in route 2
             r2_preceding = {
                 stop: idx
                 for idx, stop in enumerate(routes[r2_idx]["stops"])
                 if idx < end_idx
             }
 
-            # Intersect to find common transfer points
             transfer_points = set(r1_subsequent.keys()).intersection(
                 set(r2_preceding.keys())
             )
@@ -94,14 +89,9 @@ def get_preferable_routes(point_a, point_b, filepath="busdata.json"):
                 )
 
     # 5. Sort and Prepare Results
-    # Direct routes sorted by fewest stops
     direct_routes = sorted(direct_routes, key=lambda x: x["stops_count"])
+    one_transfer_routes = sorted(one_transfer_routes, key=lambda x: x["total_stops"])
 
-    # 1-Transfer routes sorted by fewest total stops
-    one_transfer_routes = sorted(
-        one_transfer_routes, key=lambda x: x["total_stops"])
-
-    # Optional: Filter out duplicate Route-A -> Route-B combinations to reduce noise
     unique_1_transfers = []
     seen_combos = set()
     for r in one_transfer_routes:
@@ -110,16 +100,9 @@ def get_preferable_routes(point_a, point_b, filepath="busdata.json"):
             seen_combos.add(combo)
             unique_1_transfers.append(r)
 
-    # Return structured dict prioritizing Direct paths, followed by Top 5 transfer recommendations
     return {
         "start": start,
         "destination": end,
         "direct_options": direct_routes,
         "one_transfer_options": unique_1_transfers[:5],
     }
-
-
-# ----- EXAMPLE USAGE -----
-if __name__ == "__main__":
-    result = get_preferable_routes("Sukea Street", "Chandni Chowk")
-    print(json.dumps(result, indent=2))

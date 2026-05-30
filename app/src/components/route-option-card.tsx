@@ -1,17 +1,26 @@
 import * as React from "react"
-import { Bus, ArrowUpRight, Info, ArrowRight } from "lucide-react"
+import {
+  Bus,
+  ArrowUpRight,
+  Info,
+  ArrowRight,
+  Star,
+  Zap,
+  Shield,
+  PiggyBank,
+} from "lucide-react"
 import { cn } from "@/lib/utils"
 
 export interface RouteOptionData {
   id: string
   busNo: string
-  nextBusNo?: string // Optional second bus for transfers
-  transferStop?: string // Optional name of the connection spot
+  nextBusNo?: string
+  transferStop?: string
   arrivalTime: string
   duration: string
   cost: number | string
   reliabilityScore: number
-  isRecommended?: boolean
+  tagType?: "RECOMMENDED" | "FASTEST" | "CALMEST" | "CHEAPEST" // Upgraded tag configuration type
   crowdStatus: "LOW" | "MEDIUM" | "HIGH"
   additionalInfo?: string
 }
@@ -30,12 +39,13 @@ export function RouteOptionCard({
   duration,
   cost,
   reliabilityScore,
-  isRecommended,
+  tagType,
   crowdStatus,
   additionalInfo,
   isSelected,
   onSelect,
 }: RouteOptionCardProps) {
+  // Custom theme configurations based on the crowd status enum
   const crowdConfig = {
     LOW: {
       bg: "bg-green-500/10 dark:bg-green-500/20",
@@ -57,6 +67,38 @@ export function RouteOptionCard({
     },
   }[crowdStatus]
 
+  // Config mapping containing colors, labels, and matching icons for our badges
+  const tagConfig = tagType
+    ? {
+        RECOMMENDED: {
+          bg: "bg-blue-500 shadow-blue-500/15",
+          text: "text-white",
+          label: "Recommended",
+          icon: Star,
+        },
+        FASTEST: {
+          bg: "bg-amber-500 shadow-amber-500/15",
+          text: "text-zinc-950 dark:text-white",
+          label: "Fastest",
+          icon: Zap,
+        },
+        CALMEST: {
+          bg: "bg-teal-600 shadow-teal-600/15 dark:bg-teal-500",
+          text: "text-white",
+          label: "Calmest",
+          icon: Shield,
+        },
+        CHEAPEST: {
+          bg: "bg-emerald-600 shadow-emerald-600/15 dark:bg-emerald-500",
+          text: "text-white",
+          label: "Cheapest",
+          icon: PiggyBank,
+        },
+      }[tagType]
+    : null
+
+  const TagIcon = tagConfig?.icon
+
   const handleViewDirections = (e: React.MouseEvent) => {
     e.stopPropagation()
     window.location.href = `/routes/${id}`
@@ -72,10 +114,17 @@ export function RouteOptionCard({
           : "bg-secondary/40 text-foreground/70 opacity-60 hover:opacity-85 dark:bg-secondary/10"
       )}
     >
-      {/* Recommended Pill Badge */}
-      {isRecommended && (
-        <span className="absolute -top-3 right-8 rounded-full bg-blue-500 px-4 py-1 text-[10px] font-black tracking-widest text-white uppercase shadow-md shadow-blue-500/15 sm:text-xs">
-          Recommended
+      {/* Smart Render Pill Badge Area */}
+      {tagConfig && TagIcon && (
+        <span
+          className={cn(
+            "absolute -top-3 right-8 inline-flex items-center gap-1.5 rounded-full px-4 py-1 text-[10px] font-black tracking-widest uppercase shadow-md sm:text-xs",
+            tagConfig.bg,
+            tagConfig.text
+          )}
+        >
+          <TagIcon className="size-3 shrink-0 stroke-[2.5]" />
+          {tagConfig.label}
         </span>
       )}
 
@@ -95,7 +144,6 @@ export function RouteOptionCard({
           </div>
 
           <div className="space-y-0.5">
-            {/* Dynamic Title supporting inline transfers */}
             <div className="flex flex-wrap items-center gap-1.5 text-xl font-bold tracking-tight text-foreground">
               <span>{busNo}</span>
               {nextBusNo && (
@@ -110,7 +158,6 @@ export function RouteOptionCard({
               Arrives {arrivalTime}
             </p>
 
-            {/* Transfer Sub-label Info Node */}
             {transferStop && (
               <p className="text-xs font-medium text-muted-foreground/80">
                 Change at{" "}
