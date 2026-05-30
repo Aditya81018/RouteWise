@@ -139,7 +139,7 @@ export function RouteOptionCard({
         <button
           onClick={handleViewDirections}
           className={cn(
-            "inline-flex h-10 items-center gap-1.5 rounded-full px-4 text-xs font-extrabold tracking-wider uppercase transition-all",
+            "inline-flex h-10 items-center gap-1.5 rounded-full px-4 text-left text-xs font-extrabold tracking-wider uppercase transition-all",
             isSelected
               ? "bg-blue-500/10 text-blue-500 hover:bg-blue-500/20"
               : "bg-blue-500/5 text-blue-400 hover:bg-blue-500/10"
