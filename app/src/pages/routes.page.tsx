@@ -53,7 +53,7 @@ export default function RoutesPage() {
         setRoutes(data)
 
         // 3. Pre-select recommended route natively, fallback to first entry if none flag true
-        const recommended = data.find((r) => r.isRecommended)
+        const recommended = data.find((r) => r.tagType === "RECOMMENDED")
         if (recommended) {
           setSelectedRouteId(recommended.id)
         } else if (data.length > 0) {
