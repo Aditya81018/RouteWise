@@ -22,6 +22,7 @@ interface BusTabPanelProps {
   setOsrmRoutePoints: (points: [number, number][]) => void
   handleSelectBus: (bus: BusRoute) => void
   busDropdownRef: RefObject<HTMLDivElement | null>
+  onPreSelectBus: (routeCode: string, stopName: string) => void
 }
 
 export function BusTabPanel({
@@ -35,6 +36,7 @@ export function BusTabPanel({
   setOsrmRoutePoints,
   handleSelectBus,
   busDropdownRef,
+  onPreSelectBus,
 }: BusTabPanelProps) {
   return (
     <div className="flex flex-1 flex-col gap-4">
@@ -118,9 +120,11 @@ export function BusTabPanel({
       {selectedBus ? (
         <div className="flex animate-in flex-col gap-3 rounded-xl border border-slate-100 bg-slate-50/50 p-3.5 shadow-2xs duration-200 fade-in">
           <div className="flex items-center justify-between border-b border-slate-100 pb-2">
-            <span className="text-sm font-bold text-slate-800">
-              Route details ({selectedBus.code})
-            </span>
+            <div className="flex items-center gap-2">
+              <span className="text-sm font-bold text-slate-800">
+                Route details ({selectedBus.code})
+              </span>
+            </div>
             <span
               className={`rounded px-2 py-0.5 text-[10px] font-bold tracking-wider uppercase ${selectedBus.kind === "government" ? "bg-purple-50 text-purple-600" : "bg-amber-50 text-amber-600"}`}
             >
@@ -160,6 +164,17 @@ export function BusTabPanel({
               </div>
             </div>
           )}
+
+          <button
+            onClick={() =>
+              onPreSelectBus(selectedBus.code, selectedBus.stops[0] || "")
+            }
+            className="flex items-center gap-1 rounded bg-emerald-50 px-4 py-2 text-[10px] font-bold text-emerald-600 transition-colors hover:bg-emerald-100"
+            title="Open spawn controls for this bus"
+          >
+            Go to Spawn
+            <ArrowRight className="h-2.5 w-2.5" />
+          </button>
 
           {/* Sequential Terminal Node Trail */}
           <div className="mt-1 flex flex-col gap-2">

@@ -11,13 +11,18 @@ import {
   Activity,
   Filter,
   Search,
+  Shuffle,
+  Layers,
+  Zap,
 } from "lucide-react"
 import busDataRaw from "@/assets/busdata.json"
+import coordsData from "@/assets/coords.json"
 import {
   cn,
   getRandomColor,
   getRandomCrowdStatus,
   getRandomReliability,
+  getRandomSpeed,
 } from "@/lib/utils"
 
 export interface LiveBus {
@@ -28,6 +33,7 @@ export interface LiveBus {
   color: string
   crowdStatus: "LOW" | "MEDIUM" | "HIGH"
   reliability: number
+  speed: number
 }
 
 interface BusRoute {
@@ -65,12 +71,21 @@ export function LiveBusTabPanel({
   const [selectedStop, setSelectedStop] = useState("")
   const [selectedDirection, setSelectedDirection] = useState("")
   const [selectedColor, setSelectedColor] = useState(getRandomColor())
-  const [crowdStatus, setCrowdStatus] = useState<"LOW" | "MEDIUM" | "HIGH">(getRandomCrowdStatus())
+  const [crowdStatus, setCrowdStatus] = useState<"LOW" | "MEDIUM" | "HIGH">(
+    getRandomCrowdStatus()
+  )
   const [reliability, setReliability] = useState(getRandomReliability())
+  const [speed, setSpeed] = useState(getRandomSpeed())
+
+  // Spawn Options
+  const [randomizeFleet, setRandomizeFleet] = useState(false)
+  const [fleetSize, setFleetSize] = useState(1)
 
   // Fleet Filter State
   const [fleetFilterQuery, setFleetFilterQuery] = useState("")
-  const [fleetCrowdFilter, setFleetCrowdFilter] = useState<"ALL" | "LOW" | "MEDIUM" | "HIGH">("ALL")
+  const [fleetCrowdFilter, setFleetCrowdFilter] = useState<
+    "ALL" | "LOW" | "MEDIUM" | "HIGH"
+  >("ALL")
 
   const dropdownRef = useRef<HTMLDivElement>(null)
 
@@ -106,13 +121,16 @@ export function LiveBusTabPanel({
   // Computed Filtered Fleet
   const filteredFleet = useMemo(() => {
     return liveBuses.filter((bus) => {
-      const matchesQuery = 
-        !fleetFilterQuery || 
+      const matchesQuery =
+        !fleetFilterQuery ||
         bus.routeCode.toLowerCase().includes(fleetFilterQuery.toLowerCase()) ||
-        bus.currentStop.toLowerCase().includes(fleetFilterQuery.toLowerCase()) ||
+        bus.currentStop
+          .toLowerCase()
+          .includes(fleetFilterQuery.toLowerCase()) ||
         bus.direction.toLowerCase().includes(fleetFilterQuery.toLowerCase())
-      
-      const matchesCrowd = fleetCrowdFilter === "ALL" || bus.crowdStatus === fleetCrowdFilter
+
+      const matchesCrowd =
+        fleetCrowdFilter === "ALL" || bus.crowdStatus === fleetCrowdFilter
 
       return matchesQuery && matchesCrowd
     })
@@ -145,17 +163,36 @@ export function LiveBusTabPanel({
   }
 
   const handleSpawn = () => {
-    if (!selectedRoute || !selectedStop || !selectedDirection) return
+    if (!selectedRoute || !selectedDirection) return
+    if (!randomizeFleet && !selectedStop) return
 
-    onSpawnBus({
-      id: `live-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-      routeCode: selectedRoute.code,
-      currentStop: selectedStop,
-      direction: selectedDirection,
-      color: selectedColor,
-      crowdStatus: crowdStatus,
-      reliability: reliability,
-    })
+    for (let i = 0; i < fleetSize; i++) {
+      let currentStop = selectedStop
+
+      if (randomizeFleet) {
+        const validStops = selectedRoute.stops.filter(
+          (s) =>
+            (coordsData as Record<string, [number, number] | null>)[s] !== null
+        )
+        currentStop =
+          validStops.length > 0
+            ? validStops[Math.floor(Math.random() * validStops.length)]
+            : selectedRoute.stops[0]
+      }
+
+      const isFullyRandom = randomizeFleet || i > 0
+
+      onSpawnBus({
+        id: `live-${Date.now()}-${Math.random().toString(36).substr(2, 9)}-${i}`,
+        routeCode: selectedRoute.code,
+        currentStop: currentStop,
+        direction: selectedDirection,
+        color: isFullyRandom ? getRandomColor() : selectedColor,
+        crowdStatus: isFullyRandom ? getRandomCrowdStatus() : crowdStatus,
+        reliability: isFullyRandom ? getRandomReliability() : reliability,
+        speed: isFullyRandom ? getRandomSpeed() : speed,
+      })
+    }
 
     // Reset form
     setSelectedRoute(null)
@@ -165,6 +202,9 @@ export function LiveBusTabPanel({
     setSelectedColor(getRandomColor())
     setCrowdStatus(getRandomCrowdStatus())
     setReliability(getRandomReliability())
+    setSpeed(getRandomSpeed())
+    setRandomizeFleet(false)
+    setFleetSize(1)
   }
 
   return (
@@ -240,14 +280,20 @@ export function LiveBusTabPanel({
         {/* Dependent Selectors (Only show if a route is selected) */}
         {selectedRoute && (
           <div className="flex animate-in flex-col gap-3 duration-200 fade-in slide-in-from-top-2">
-            <div className="flex flex-col gap-1">
+            <div
+              className={cn(
+                "flex flex-col gap-1 transition-opacity",
+                randomizeFleet && "pointer-events-none opacity-50"
+              )}
+            >
               <label className="text-[10px] font-medium text-slate-500 uppercase">
-                Current Stop
+                Current Stop {randomizeFleet && "(Randomized)"}
               </label>
               <div className="relative">
                 <select
                   value={selectedStop}
                   onChange={(e) => setSelectedStop(e.target.value)}
+                  disabled={randomizeFleet}
                   className="w-full appearance-none rounded-md border border-slate-200 bg-slate-50 py-1.5 pr-8 pl-8 text-sm text-slate-700 focus:border-emerald-500 focus:outline-none"
                 >
                   {selectedRoute.stops.map((stop, i) => (
@@ -284,27 +330,15 @@ export function LiveBusTabPanel({
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-3">
+            <div
+              className={cn(
+                "grid grid-cols-2 gap-3 transition-opacity",
+                randomizeFleet && "pointer-events-none opacity-50"
+              )}
+            >
               <div className="flex flex-col gap-1">
                 <label className="text-[10px] font-medium text-slate-500 uppercase">
-                  Crowd Status
-                </label>
-                <div className="relative">
-                  <select
-                    value={crowdStatus}
-                    onChange={(e) => setCrowdStatus(e.target.value as "LOW" | "MEDIUM" | "HIGH")}
-                    className="w-full appearance-none rounded-md border border-slate-200 bg-slate-50 py-1.5 pr-8 pl-8 text-xs text-slate-700 focus:border-emerald-500 focus:outline-none"
-                  >
-                    <option value="LOW">Low</option>
-                    <option value="MEDIUM">Medium</option>
-                    <option value="HIGH">High</option>
-                  </select>
-                  <Users className="absolute top-2 left-2.5 h-3.5 w-3.5 text-slate-400" />
-                </div>
-              </div>
-              <div className="flex flex-col gap-1">
-                <label className="text-[10px] font-medium text-slate-500 uppercase">
-                  Reliability
+                  Reliability {randomizeFleet && "(Random)"}
                 </label>
                 <div className="relative">
                   <input
@@ -313,31 +347,141 @@ export function LiveBusTabPanel({
                     max="100"
                     value={reliability}
                     onChange={(e) => setReliability(Number(e.target.value))}
+                    disabled={randomizeFleet}
                     className="w-full rounded-md border border-slate-200 bg-slate-50 py-1.5 pr-2 pl-8 text-xs text-slate-700 focus:border-emerald-500 focus:outline-none"
                   />
                   <Activity className="absolute top-2 left-2.5 h-3.5 w-3.5 text-slate-400" />
-                  <span className="absolute top-2 right-2 text-[10px] font-bold text-slate-400">%</span>
+                  <span className="absolute top-2 right-2 text-[10px] font-bold text-slate-400">
+                    %
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-col gap-1">
+                <label className="text-[10px] font-medium text-slate-500 uppercase">
+                  Speed {randomizeFleet && "(Random)"}
+                </label>
+                <div className="relative">
+                  <input
+                    type="number"
+                    min="10"
+                    max="120"
+                    value={speed}
+                    onChange={(e) => setSpeed(Number(e.target.value))}
+                    disabled={randomizeFleet}
+                    className="w-full rounded-md border border-slate-200 bg-slate-50 py-1.5 pr-2 pl-8 text-xs text-slate-700 focus:border-emerald-500 focus:outline-none"
+                  />
+                  <Shuffle className="absolute top-2 left-2.5 h-3.5 w-3.5 text-slate-400" />
+                  <span className="absolute top-2 right-2 text-[10px] font-bold text-slate-400">
+                    km/h
+                  </span>
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-col gap-1">
+            <div
+              className={cn(
+                "flex flex-col gap-1 transition-opacity",
+                randomizeFleet && "pointer-events-none opacity-50"
+              )}
+            >
               <label className="text-[10px] font-medium text-slate-500 uppercase">
-                Bus Color
+                Crowd Status {randomizeFleet && "(Random)"}
+              </label>
+              <div className="relative">
+                <select
+                  value={crowdStatus}
+                  onChange={(e) =>
+                    setCrowdStatus(
+                      e.target.value as "LOW" | "MEDIUM" | "HIGH"
+                    )
+                  }
+                  disabled={randomizeFleet}
+                  className="w-full appearance-none rounded-md border border-slate-200 bg-slate-50 py-1.5 pr-8 pl-8 text-xs text-slate-700 focus:border-emerald-500 focus:outline-none"
+                >
+                  <option value="LOW">Low</option>
+                  <option value="MEDIUM">Medium</option>
+                  <option value="HIGH">High</option>
+                </select>
+                <Users className="absolute top-2 left-2.5 h-3.5 w-3.5 text-slate-400" />
+              </div>
+            </div>
+
+            <div
+              className={cn(
+                "flex flex-col gap-1 transition-opacity",
+                randomizeFleet && "pointer-events-none opacity-50"
+              )}
+            >
+              <label className="text-[10px] font-medium text-slate-500 uppercase">
+                Bus Color {randomizeFleet && "(Random)"}
               </label>
               <div className="flex items-center gap-2">
                 <input
                   type="color"
                   value={selectedColor}
                   onChange={(e) => setSelectedColor(e.target.value)}
+                  disabled={randomizeFleet}
                   className="h-8 w-12 cursor-pointer rounded border border-slate-200 bg-white p-0.5"
                 />
                 <input
                   type="text"
                   value={selectedColor}
                   onChange={(e) => setSelectedColor(e.target.value)}
-                  className="flex-1 rounded-md border border-slate-200 bg-slate-50 py-1.5 px-3 text-xs text-slate-700 focus:border-emerald-500 focus:outline-none"
+                  disabled={randomizeFleet}
+                  className="flex-1 rounded-md border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs text-slate-700 focus:border-emerald-500 focus:outline-none"
                 />
+              </div>
+            </div>
+
+            {/* Spawn Strategy & Fleet */}
+            <div className="flex items-center justify-between">
+              <label className="flex cursor-pointer items-center gap-2 select-none">
+                <input
+                  type="checkbox"
+                  checked={randomizeFleet}
+                  onChange={(e) => setRandomizeFleet(e.target.checked)}
+                  className="h-3.5 w-3.5 rounded border-slate-300 text-emerald-600 accent-emerald-600 focus:ring-emerald-500"
+                />
+                <div className="flex flex-col">
+                  <span className="text-[10px] font-bold text-slate-700 uppercase">
+                    Randomize Fleet
+                  </span>
+                  <span className="text-[9px] text-slate-400">
+                    Random stop, color, and status
+                  </span>
+                </div>
+              </label>
+              <Shuffle
+                className={cn(
+                  "h-3.5 w-3.5 transition-colors",
+                  randomizeFleet ? "text-emerald-500" : "text-slate-300"
+                )}
+              />
+            </div>
+
+            <div className="flex flex-col gap-2 rounded-lg border border-slate-100 bg-slate-50/50 p-2.5">
+              <div className="flex items-center gap-3 border-t border-slate-100 pt-2">
+                <div className="flex flex-1 flex-col gap-0.5">
+                  <span className="text-[9px] font-bold text-slate-400 uppercase">
+                    Fleet Size
+                  </span>
+                  <span className="text-[8px] leading-tight text-slate-500">
+                    Number of buses to spawn
+                  </span>
+                </div>
+                <div className="relative flex items-center">
+                  <input
+                    type="number"
+                    min="1"
+                    max="20"
+                    value={fleetSize}
+                    onChange={(e) =>
+                      setFleetSize(Math.max(1, parseInt(e.target.value) || 1))
+                    }
+                    className="w-16 rounded border border-slate-200 bg-white py-1 pr-2 pl-7 text-xs font-bold text-slate-700 focus:border-emerald-500 focus:outline-none"
+                  />
+                  <Layers className="absolute left-2 h-3.5 w-3.5 text-slate-400" />
+                </div>
               </div>
             </div>
 
@@ -362,7 +506,7 @@ export function LiveBusTabPanel({
             {liveBuses.length > 0 && (
               <button
                 onClick={onRemoveAllBuses}
-                className="text-[9px] font-bold text-rose-500 hover:text-rose-600 transition-colors uppercase"
+                className="text-[9px] font-bold text-rose-500 uppercase transition-colors hover:text-rose-600"
               >
                 Clear All
               </button>
@@ -384,7 +528,9 @@ export function LiveBusTabPanel({
             <Search className="absolute top-2 left-2 h-3 w-3 text-slate-400" />
           </div>
           <div className="flex items-center gap-2">
-            <label className="text-[9px] font-medium text-slate-400 uppercase whitespace-nowrap">Crowd:</label>
+            <label className="text-[9px] font-medium whitespace-nowrap text-slate-400 uppercase">
+              Crowd:
+            </label>
             <div className="flex flex-1 items-center gap-1">
               {(["ALL", "LOW", "MEDIUM", "HIGH"] as const).map((s) => (
                 <button
@@ -394,7 +540,7 @@ export function LiveBusTabPanel({
                     "flex-1 rounded py-0.5 text-[9px] font-bold transition-all",
                     fleetCrowdFilter === s
                       ? "bg-emerald-500 text-white shadow-xs"
-                      : "bg-white text-slate-400 border border-slate-100 hover:border-slate-200"
+                      : "border border-slate-100 bg-white text-slate-400 hover:border-slate-200"
                   )}
                 >
                   {s}
@@ -408,14 +554,18 @@ export function LiveBusTabPanel({
           {filteredFleet.length === 0 ? (
             <div className="flex flex-col items-center justify-center rounded-lg border border-dashed border-slate-200 p-6 text-center">
               <p className="text-xs text-slate-400">
-                {liveBuses.length === 0 ? "No buses spawned yet." : "No matching buses found."}
+                {liveBuses.length === 0
+                  ? "No buses spawned yet."
+                  : "No matching buses found."}
               </p>
             </div>
           ) : (
             filteredFleet.map((bus, i) => (
               <div
                 key={i}
-                onClick={() => onSelectBus(selectedBusId === bus.id ? null : bus)}
+                onClick={() =>
+                  onSelectBus(selectedBusId === bus.id ? null : bus)
+                }
                 className={cn(
                   "flex cursor-pointer flex-col rounded-lg border p-2.5 shadow-sm transition-all",
                   selectedBusId === bus.id
@@ -460,20 +610,28 @@ export function LiveBusTabPanel({
                       {bus.direction}
                     </span>
                   </div>
-                  
+
                   <div className="flex items-center gap-2">
-                    <div className={cn(
-                      "flex items-center gap-1 rounded-full px-1.5 py-0.5 text-[9px] font-bold uppercase",
-                      bus.crowdStatus === "LOW" ? "bg-emerald-100 text-emerald-700" :
-                      bus.crowdStatus === "MEDIUM" ? "bg-amber-100 text-amber-700" :
-                      "bg-rose-100 text-rose-700"
-                    )}>
+                    <div
+                      className={cn(
+                        "flex items-center gap-1 rounded-full px-1.5 py-0.5 text-[9px] font-bold uppercase",
+                        bus.crowdStatus === "LOW"
+                          ? "bg-emerald-100 text-emerald-700"
+                          : bus.crowdStatus === "MEDIUM"
+                            ? "bg-amber-100 text-amber-700"
+                            : "bg-rose-100 text-rose-700"
+                      )}
+                    >
                       <Users className="h-2.5 w-2.5" />
                       {bus.crowdStatus}
                     </div>
                     <div className="flex items-center gap-1 rounded-full bg-slate-100 px-1.5 py-0.5 text-[9px] font-bold text-slate-600 uppercase">
                       <Activity className="h-2.5 w-2.5" />
                       {bus.reliability}% RELIABLE
+                    </div>
+                    <div className="flex items-center gap-1 rounded-full bg-slate-100 px-1.5 py-0.5 text-[9px] font-bold text-slate-600 uppercase">
+                      <Zap className="h-2.5 w-2.5" />
+                      {bus.speed} KM/H
                     </div>
                   </div>
                 </div>

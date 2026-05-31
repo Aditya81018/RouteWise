@@ -103,3 +103,5 @@ export const getRandomCrowdStatus = (): "LOW" | "MEDIUM" | "HIGH" => {
 }
 
 export const getRandomReliability = () => Math.floor(Math.random() * 30) + 70 // 70-100%
+
+export const getRandomSpeed = () => Math.floor(Math.random() * 30) + 30 // 30-60 km/h

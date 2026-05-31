@@ -141,6 +141,10 @@ export function SidebarControls({
             setOsrmRoutePoints={setOsrmRoutePoints}
             handleSelectBus={handleSelectBus}
             busDropdownRef={busDropdownRef}
+            onPreSelectBus={(routeCode, stopName) => {
+              setPreSelectedBus({ routeCode, stopName })
+              setActiveTab("live")
+            }}
           />
         )}
         {activeTab === "stops" && (

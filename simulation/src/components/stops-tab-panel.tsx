@@ -6,7 +6,8 @@ import busDataRaw from "@/assets/busdata.json"
 import { 
   getRandomColor, 
   getRandomCrowdStatus, 
-  getRandomReliability 
+  getRandomReliability,
+  getRandomSpeed,
 } from "@/lib/utils"
 import { type LiveBus } from "./live-bus-tab-panel"
 
@@ -50,6 +51,13 @@ export function StopsTabPanel({
   onPreSelectBus,
 }: StopsTabPanelProps) {
   const [multiplier, setMultiplier] = useState(1)
+  const [randomizeStart, setRandomizeStart] = useState(true)
+  const [notification, setNotification] = useState<string | null>(null)
+
+  const showNotification = (msg: string) => {
+    setNotification(msg)
+    setTimeout(() => setNotification(null), 3000)
+  }
 
   const stopBuses = useMemo(() => {
     if (!searchQuery) return []
@@ -63,20 +71,27 @@ export function StopsTabPanel({
     const route = routes.find((r) => r.code === routeCode)
     if (!route || !route.stops || route.stops.length === 0) return
 
-    // Pick a random stop from the route that has valid coordinates
-    const validStops = route.stops.filter((s: string) => (coordsData as Record<string, [number, number] | null>)[s] !== null)
-    const randomStop = validStops.length > 0 
-      ? validStops[Math.floor(Math.random() * validStops.length)]
-      : route.stops[0]
+    let startStop: string
+    if (randomizeStart) {
+      // Pick a random stop from the route that has valid coordinates
+      const validStops = route.stops.filter((s: string) => (coordsData as Record<string, [number, number] | null>)[s] !== null)
+      startStop = validStops.length > 0 
+        ? validStops[Math.floor(Math.random() * validStops.length)]
+        : route.stops[0]
+    } else {
+      // Use current search stop
+      startStop = searchQuery
+    }
 
     onSpawnBus({
       id: `live-${Date.now()}-${Math.random().toString(36).substr(2, 9)}-${index}`,
       routeCode: routeCode,
-      currentStop: randomStop,
+      currentStop: startStop,
       direction: "Towards Destination",
       color: getRandomColor(),
       crowdStatus: getRandomCrowdStatus(),
       reliability: getRandomReliability(),
+      speed: getRandomSpeed(),
     })
   }
 
@@ -84,6 +99,7 @@ export function StopsTabPanel({
     for (let i = 0; i < multiplier; i++) {
       performSpawn(routeCode, i)
     }
+    showNotification(`Spawned ${multiplier} bus(es) for route ${routeCode}`)
   }
 
   const handleSpawnAllRandom = () => {
@@ -92,6 +108,7 @@ export function StopsTabPanel({
       const randomRoute = stopBuses[Math.floor(Math.random() * stopBuses.length)]
       performSpawn(randomRoute, i)
     }
+    showNotification(`Spawned ${multiplier} random bus(es) from this stop`)
   }
 
   return (
@@ -200,8 +217,17 @@ export function StopsTabPanel({
           </div>
 
           {stopBuses.length > 0 && (
-            <div className="flex items-center gap-2 border-t border-slate-100 pt-2 mt-1">
-              <div className="flex flex-1 items-center gap-2">
+            <div className="flex flex-col gap-2 border-t border-slate-100 pt-2 mt-1">
+              <label className="flex cursor-pointer items-center gap-2 select-none">
+                <input
+                  type="checkbox"
+                  checked={randomizeStart}
+                  onChange={(e) => setRandomizeStart(e.target.checked)}
+                  className="h-3.5 w-3.5 cursor-pointer rounded border-slate-300 text-emerald-600 accent-emerald-600 focus:ring-emerald-500"
+                />
+                <span className="text-[10px] font-medium text-slate-600">Randomize Start Position</span>
+              </label>
+              <div className="flex items-center gap-2">
                 <input
                   type="number"
                   min="1"
@@ -253,6 +279,14 @@ export function StopsTabPanel({
           </div>
         </label>
       </div>
+
+      {/* Notification Toast */}
+      {notification && (
+        <div className="fixed bottom-4 right-4 z-[9999] flex items-center gap-2 rounded-lg bg-slate-800 px-4 py-2 text-xs text-white shadow-lg animate-in fade-in slide-in-from-bottom-2 duration-300">
+          <Zap className="h-3 w-3 text-emerald-400" />
+          {notification}
+        </div>
+      )}
     </div>
   )
 }

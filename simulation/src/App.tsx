@@ -7,6 +7,9 @@ import {
   AlertCircle,
   Crosshair,
   Bus as BusIcon,
+  Clock,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react"
 import coordsData from "@/assets/coords.json"
 import stopsData from "@/assets/stops.json"
@@ -42,6 +45,7 @@ export interface AnimatedLiveBus extends LiveBus {
   pathPoints?: [number, number][]
   fullPathPoints?: [number, number][]
   currentPathIndex?: number
+  lastUpdateAt: number
 }
 
 // Helper mathematical function to interpolate coordinates based on Earth's curvature
@@ -90,6 +94,7 @@ export default function App() {
   const [loading, setLoading] = useState(true)
 
   const [activeTab, setActiveTab] = useState<TabType>("stops")
+  const [timeScale, setTimeScale] = useState<number>(1)
   const [searchQuery, setSearchQuery] = useState<string>("")
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false)
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
@@ -180,6 +185,7 @@ export default function App() {
       nextStopIndex: nextIdx,
       pathPoints: [],
       currentPathIndex: 0,
+      lastUpdateAt: Date.now(),
     }
 
     // Immediately show the bus at the initial stop
@@ -238,18 +244,26 @@ export default function App() {
   // 4. ANIMATION ENGINE LOOP
   useEffect(() => {
     const interval = setInterval(() => {
+      const now = Date.now()
       setLiveBuses((prevBuses) => {
         if (prevBuses.length === 0) return prevBuses
 
+        const updateGap = 10000 / timeScale
+
         return prevBuses.map((bus) => {
+          // Check if this bus is due for an update
+          if (now - bus.lastUpdateAt < updateGap) return bus
+          
           // If it reached the terminal station, stay there
           if (bus.nextStopIndex >= bus.stopsSequence.length) return bus
 
           // Physics Setup:
-          // User requested ~30km/h.
-          // 30 km/h = 8.33 meters/second. Over 10 seconds = ~83 meters per tick.
-          const SPEED_KMH = 300 // increased for testing visibility as per previous comment
-          const DISTANCE_METERS_PER_10_SEC = (SPEED_KMH * 1000) / 360
+          // Individual bus speed in km/h.
+          // Move exactly 10 seconds worth of distance per "jump"
+          // Distance (m) = Speed (km/h) * 1000 / 3600 * 10s = Speed * 10 / 3.6
+          const DISTANCE_METERS_PER_TICK = (bus.speed * 10) / 3.6
+
+          let updatedBus = { ...bus, lastUpdateAt: now }
 
           if (
             bus.pathPoints &&
@@ -257,7 +271,7 @@ export default function App() {
             bus.currentPathIndex !== undefined &&
             bus.currentPathIndex < bus.pathPoints.length
           ) {
-            let remainingDistance = DISTANCE_METERS_PER_10_SEC
+            let remainingDistance = DISTANCE_METERS_PER_TICK
             let currentPos = bus.currentCoords
             let currentIdx = bus.currentPathIndex
 
@@ -306,51 +320,52 @@ export default function App() {
               }
             }
 
-            return {
-              ...bus,
+            updatedBus = {
+              ...updatedBus,
               currentCoords: currentPos,
               currentPathIndex: currentIdx,
               currentStop: currStop,
               nextStopIndex: nextStopIdx,
             }
-          }
-
-          // Fallback to straight-line interpolation if no pathPoints are loaded yet
-          const nextStopName = bus.stopsSequence[bus.nextStopIndex]
-          const targetCoords = (
-            coordsData as unknown as Record<string, [number, number] | null>
-          )[nextStopName]
-
-          // If the next stop lacks geodata, blindly skip to the one after it
-          if (!targetCoords) {
-            return { ...bus, nextStopIndex: bus.nextStopIndex + 1 }
-          }
-
-          const result = moveTowards(
-            bus.currentCoords,
-            targetCoords,
-            DISTANCE_METERS_PER_10_SEC
-          )
-
-          if (result.reached) {
-            return {
-              ...bus,
-              currentCoords: result.pos,
-              currentStop: nextStopName, // Update the label in the sidebar list!
-              nextStopIndex: bus.nextStopIndex + 1,
-            }
           } else {
-            return {
-              ...bus,
-              currentCoords: result.pos,
+            // Fallback to straight-line interpolation if no pathPoints are loaded yet
+            const nextStopName = bus.stopsSequence[bus.nextStopIndex]
+            const targetCoords = (
+              coordsData as unknown as Record<string, [number, number] | null>
+            )[nextStopName]
+
+            // If the next stop lacks geodata, blindly skip to the one after it
+            if (!targetCoords) {
+              updatedBus = { ...updatedBus, nextStopIndex: bus.nextStopIndex + 1 }
+            } else {
+              const result = moveTowards(
+                bus.currentCoords,
+                targetCoords,
+                DISTANCE_METERS_PER_TICK
+              )
+
+              if (result.reached) {
+                updatedBus = {
+                  ...updatedBus,
+                  currentCoords: result.pos,
+                  currentStop: nextStopName,
+                  nextStopIndex: bus.nextStopIndex + 1,
+                }
+              } else {
+                updatedBus = {
+                  ...updatedBus,
+                  currentCoords: result.pos,
+                }
+              }
             }
           }
+          return updatedBus
         })
       })
-    }, 1 * 1000) // Trigger every 1 seconds (10s simulated)
+    }, 100)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [timeScale])
 
   useEffect(() => {
     let isMounted = true
@@ -709,13 +724,46 @@ export default function App() {
         )}
 
         {!loading && (
-          <button
-            onClick={handleRecenterToUser}
-            title="Recenter map to user coordinates"
-            className="absolute right-5 bottom-5 z-[1000] flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 shadow-md transition-all hover:bg-slate-50 hover:text-emerald-600 active:scale-95"
-          >
-            <Crosshair className="h-5 w-5" />
-          </button>
+          <div className="absolute right-5 bottom-5 z-[1000] flex flex-col items-center gap-2">
+            <button
+              onClick={handleRecenterToUser}
+              title="Recenter map to user coordinates"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 shadow-md transition-all hover:bg-slate-50 hover:text-emerald-600 active:scale-95"
+            >
+              <Crosshair className="h-5 w-5" />
+            </button>
+
+            {/* Redesigned Speed Multiplier UI */}
+            <div className="flex items-center gap-1 rounded-full border border-slate-200 bg-white/90 p-1 shadow-md backdrop-blur-sm">
+              <button
+                onClick={() => {
+                  const scales = [1, 2, 4, 8]
+                  const idx = scales.indexOf(timeScale)
+                  if (idx > 0) setTimeScale(scales[idx - 1])
+                }}
+                className="flex h-7 w-7 items-center justify-center rounded-full text-slate-400 transition-colors hover:bg-slate-100 hover:text-emerald-600 active:scale-90"
+                title="Decrease simulation speed"
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </button>
+              
+              <div className="flex min-w-[32px] flex-col items-center px-1">
+                <span className="text-[10px] font-bold text-emerald-600">{timeScale}x</span>
+              </div>
+
+              <button
+                onClick={() => {
+                  const scales = [1, 2, 4, 8]
+                  const idx = scales.indexOf(timeScale)
+                  if (idx < scales.length - 1) setTimeScale(scales[idx + 1])
+                }}
+                className="flex h-7 w-7 items-center justify-center rounded-full text-slate-400 transition-colors hover:bg-slate-100 hover:text-emerald-600 active:scale-90"
+                title="Increase simulation speed"
+              >
+                <ChevronRight className="h-4 w-4" />
+              </button>
+            </div>
+          </div>
         )}
       </div>
 
