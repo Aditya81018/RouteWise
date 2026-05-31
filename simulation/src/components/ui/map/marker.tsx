@@ -2,7 +2,6 @@
 
 import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from "react"
 import { createPortal } from "react-dom"
-import type mapboxgl from "mapbox-gl"
 import { mapgl } from "./map-library"
 import { X } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -10,9 +9,9 @@ import { useMap } from "./hooks"
 import type { MapCoordinates, LngLatCoordinates } from "./types"
 
 type MarkerContextValue = {
-  markerRef: React.RefObject<mapboxgl.Marker | null>
+  markerRef: React.RefObject<any>
   markerElementRef: React.RefObject<HTMLDivElement | null>
-  map: mapboxgl.Map | null
+  map: any
   // State triggers re-render when marker element is ready.
   // Refs don't cause re-renders, so children would see null without this.
   isMounted: boolean
@@ -138,7 +137,7 @@ export const MapMarker = ({
   pitchAlignment,
 }: MapMarkerProps) => {
   const { map, isLoaded } = useMap()
-  const markerRef = useRef<mapboxgl.Marker | null>(null)
+  const markerRef = useRef<any>(null)
   const markerElementRef = useRef<HTMLDivElement | null>(null)
   const [isMounted, setIsMounted] = useState(false)
 
@@ -315,7 +314,7 @@ export const MarkerPopup = ({
 }: MarkerPopupProps) => {
   const { markerRef, isMounted } = useMarkerContext()
   const containerRef = useRef<HTMLDivElement | null>(null)
-  const popupRef = useRef<mapboxgl.Popup | null>(null)
+  const popupRef = useRef<any>(null)
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -386,7 +385,7 @@ export const MarkerTooltip = ({
 }: MarkerTooltipProps) => {
   const { markerRef, markerElementRef, map, isMounted } = useMarkerContext()
   const containerRef = useRef<HTMLDivElement | null>(null)
-  const popupRef = useRef<mapboxgl.Popup | null>(null)
+  const popupRef = useRef<any>(null)
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {

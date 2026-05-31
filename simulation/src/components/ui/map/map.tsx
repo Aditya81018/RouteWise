@@ -68,7 +68,7 @@ export const Map = ({
   rotateSpeed = DEFAULT_ROTATE_SPEED,
 }: MapProps) => {
   const containerRef = useRef<HTMLDivElement>(null)
-  const mapRef = useRef<mapboxgl.Map | null>(null)
+  const mapRef = useRef<any>(null)
   const [isLoaded, setIsLoaded] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const { resolvedTheme } = useTheme()
@@ -89,14 +89,14 @@ export const Map = ({
   }
 
   const createMapInstance = (container: HTMLDivElement) => {
-    return new mapgl.Map({
+    return new (mapgl as any).Map({
       container,
       style: getMapStyle(),
       center,
       zoom,
       bearing,
       pitch,
-      projection,
+      ...(detectedLibrary === "mapbox" ? { projection } : {}),
       minZoom,
       maxZoom,
       maxBounds,
@@ -108,7 +108,7 @@ export const Map = ({
     return styleUrl.includes("mapbox://styles/mapbox/standard")
   }
 
-  const updateStandardLightPreset = (mapInstance: mapboxgl.Map) => {
+  const updateStandardLightPreset = (mapInstance: any) => {
     if (detectedLibrary !== "mapbox") {
       return
     }
@@ -126,12 +126,12 @@ export const Map = ({
     }
   }
 
-  const handleMapError = (e: mapboxgl.ErrorEvent) => {
+  const handleMapError = (e: any) => {
     console.error("Map error:", e.error)
     setError("Failed to load map")
   }
 
-  const cleanupMap = (mapInstance: mapboxgl.Map) => {
+  const cleanupMap = (mapInstance: any) => {
     mapInstance.remove()
     mapRef.current = null
     setIsLoaded(false)
@@ -155,7 +155,7 @@ export const Map = ({
     initializedRef.current = true
 
     if (accessToken) {
-      mapgl.accessToken = accessToken
+      (mapgl as any).accessToken = accessToken
     }
 
     try {

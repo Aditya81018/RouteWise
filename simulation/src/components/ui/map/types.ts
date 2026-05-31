@@ -1,5 +1,5 @@
 import { type RefObject } from "react"
-import type { Map, Marker, ProjectionSpecification } from "mapbox-gl"
+import type { ProjectionSpecification } from "mapbox-gl"
 import type { MapLibraryName } from "./map-library"
 
 export type { MapLibraryName }
@@ -65,14 +65,14 @@ export type MapCompareOrientation = "horizontal" | "vertical"
 export type MapSyncLayout = "horizontal" | "vertical" | "grid"
 
 export type MapContextValue = {
-  map: Map | null
+  map: any
   isLoaded: boolean
   library: MapLibraryName
 }
 
 export type MarkerContextValue = {
-  markerRef: RefObject<Marker | null>
+  markerRef: RefObject<any>
   markerElementRef: RefObject<HTMLDivElement | null>
-  map: Map | null
+  map: any
   isReady: boolean
 }

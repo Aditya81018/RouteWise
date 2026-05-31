@@ -172,7 +172,7 @@ export function LiveBusTabPanel({
       if (randomizeFleet) {
         const validStops = selectedRoute.stops.filter(
           (s) =>
-            (coordsData as Record<string, [number, number] | null>)[s] !== null
+            (coordsData as unknown as Record<string, [number, number] | null>)[s] !== null
         )
         currentStop =
           validStops.length > 0

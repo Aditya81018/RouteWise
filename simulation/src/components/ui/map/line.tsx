@@ -1,7 +1,5 @@
 "use client"
 
-import type mapboxgl from "mapbox-gl"
-
 import { useEffect, useId, useRef } from "react"
 import { useMap } from "./hooks"
 import type { MapPath } from "./types"
@@ -105,7 +103,7 @@ export function MapLine({
 
       const source = map.getSource(sourceId)
       if (source && "setData" in source && coordinates.length >= 2) {
-        ;(source as mapboxgl.GeoJSONSource).setData({
+        ;(source as any).setData({
           type: "Feature",
           properties: {},
           geometry: {

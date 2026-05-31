@@ -74,7 +74,7 @@ export function StopsTabPanel({
     let startStop: string
     if (randomizeStart) {
       // Pick a random stop from the route that has valid coordinates
-      const validStops = route.stops.filter((s: string) => (coordsData as Record<string, [number, number] | null>)[s] !== null)
+      const validStops = route.stops.filter((s: string) => (coordsData as unknown as Record<string, [number, number] | null>)[s] !== null)
       startStop = validStops.length > 0 
         ? validStops[Math.floor(Math.random() * validStops.length)]
         : route.stops[0]
@@ -154,7 +154,7 @@ export function StopsTabPanel({
           <div className="absolute top-[68px] right-0 left-0 z-[9999] max-h-60 overflow-hidden overflow-y-auto rounded-lg border border-slate-200 bg-white shadow-lg">
             {filteredStops.map((stopName) => {
               const hasCoords =
-                (coordsData as Record<string, [number, number] | null>)[stopName] !== null
+                (coordsData as unknown as Record<string, [number, number] | null>)[stopName] !== null
               return (
                 <button
                   key={stopName}
@@ -177,7 +177,7 @@ export function StopsTabPanel({
       </div>
 
       {/* SECTION 2: Stop Details & Buses */}
-      {searchQuery && (coordsData as Record<string, [number, number] | null>)[searchQuery] && (
+      {searchQuery && (coordsData as unknown as Record<string, [number, number] | null>)[searchQuery] && (
         <div className="flex flex-col gap-3 rounded-xl border border-slate-200 bg-slate-50/50 p-3 shadow-sm animate-in fade-in slide-in-from-top-2 duration-200">
           <div className="flex items-center justify-between border-b border-slate-100 pb-2">
             <div className="flex items-center gap-2">
