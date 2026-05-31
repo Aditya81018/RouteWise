@@ -1,5 +1,5 @@
 import { type RefObject } from "react"
-import { Search, Bus as BusIcon, Compass, Info } from "lucide-react"
+import { Search, Bus as BusIcon, Compass, Info, ArrowRight } from "lucide-react"
 import coordsData from "@/assets/coords.json"
 
 interface BusRoute {
@@ -75,21 +75,41 @@ export function BusTabPanel({
 
         {/* Bus Autocomplete Dropdown */}
         {isBusDropdownOpen && filteredBuses.length > 0 && (
-          <div className="absolute top-[68px] right-0 left-0 z-[9999] max-h-52 overflow-hidden overflow-y-auto rounded-lg border border-slate-200 bg-white shadow-lg">
-            {filteredBuses.map((bus) => (
-              <button
-                key={bus.code}
-                onClick={() => handleSelectBus(bus)}
-                className="group flex w-full items-center justify-between border-b border-slate-50 px-3 py-2 text-left text-sm transition-colors last:border-0 hover:bg-slate-50"
-              >
-                <span className="font-semibold text-slate-700 group-hover:text-emerald-600">
-                  Route {bus.code}
-                </span>
-                <span className="rounded bg-slate-100 px-1.5 py-0.5 text-[10px] text-slate-400 capitalize">
-                  {bus.kind}
-                </span>
-              </button>
-            ))}
+          <div className="absolute top-[68px] right-0 left-0 z-[9999] max-h-60 overflow-hidden overflow-y-auto rounded-lg border border-slate-200 bg-white shadow-lg">
+            {filteredBuses.map((bus, i) => {
+              // Extract origin and destination to display in the dropdown
+              const origin = bus.stops.length > 0 ? bus.stops[0] : "Unknown"
+              const destination =
+                bus.stops.length > 1
+                  ? bus.stops[bus.stops.length - 1]
+                  : "Unknown"
+
+              return (
+                <button
+                  key={i}
+                  onClick={() => handleSelectBus(bus)}
+                  className="group flex w-full flex-col gap-1 border-b border-slate-50 px-3 py-2.5 text-left transition-colors last:border-0 hover:bg-slate-50"
+                >
+                  <div className="flex w-full items-center justify-between">
+                    <span className="text-sm font-semibold text-slate-700 group-hover:text-emerald-600">
+                      Route {bus.code}
+                    </span>
+                    <span className="rounded bg-slate-100 px-1.5 py-0.5 text-[10px] text-slate-400 capitalize">
+                      {bus.kind}
+                    </span>
+                  </div>
+
+                  {/* Origin -> Destination Subtitle */}
+                  <div className="flex w-full items-center gap-1.5 text-[10px] text-slate-500">
+                    <span className="truncate">{origin}</span>
+                    <ArrowRight className="h-3 w-3 shrink-0 text-slate-300" />
+                    <span className="truncate font-medium text-slate-600">
+                      {destination}
+                    </span>
+                  </div>
+                </button>
+              )
+            })}
           </div>
         )}
       </div>
@@ -161,7 +181,7 @@ export function BusTabPanel({
                     <span
                       className={`shrink-0 text-[9px] font-medium ${hasCoords ? "text-emerald-600" : "text-slate-300"}`}
                     >
-                      {hasCoords ? "• Live Map" : "• No GPS"}
+                      {hasCoords ? "• Marked" : "• Not marked"}
                     </span>
                   </div>
                 )

@@ -1,9 +1,10 @@
 import { type RefObject } from "react"
-import { Bus as BusIcon, Navigation } from "lucide-react"
+import { Bus as BusIcon, Navigation, Radio } from "lucide-react"
 import { BusTabPanel } from "./bus-tab-panel"
 import { StopsTabPanel } from "./stops-tab-panel"
+import { LiveBusTabPanel, type LiveBus } from "./live-bus-tab-panel"
 
-type TabType = "buses" | "stops"
+type TabType = "buses" | "stops" | "live"
 
 interface BusRoute {
   code: string
@@ -18,7 +19,7 @@ interface SidebarControlsProps {
   activeTab: TabType
   setActiveTab: (tab: TabType) => void
 
-  // Buses State & Handlers
+  // Buses
   busSearchQuery: string
   setBusSearchQuery: (query: string) => void
   isBusDropdownOpen: boolean
@@ -30,7 +31,7 @@ interface SidebarControlsProps {
   handleSelectBus: (bus: BusRoute) => void
   busDropdownRef: RefObject<HTMLDivElement | null>
 
-  // Stops State & Handlers
+  // Stops
   searchQuery: string
   setSearchQuery: (query: string) => void
   isDropdownOpen: boolean
@@ -39,7 +40,17 @@ interface SidebarControlsProps {
   handleNavigateToStop: (stopName: string) => void
   dropdownRef: RefObject<HTMLDivElement | null>
 
-  // Map Layer Toggles
+  // Live Buses
+  liveBuses: LiveBus[]
+  handleSpawnBus: (bus: LiveBus) => void
+  handleRemoveLiveBus: (id: string) => void
+  handleRemoveAllLiveBuses: () => void
+  onSelectLiveBus: (bus: LiveBus | null) => void
+  selectedLiveBusId: string | null
+  preSelectedBus: { routeCode: string; stopName: string } | null
+  setPreSelectedBus: (val: { routeCode: string; stopName: string } | null) => void
+
+  // Toggles
   showStops: boolean
   setShowStops: (show: boolean) => void
   visibleMarkersCount: number
@@ -65,6 +76,14 @@ export function SidebarControls({
   filteredStops,
   handleNavigateToStop,
   dropdownRef,
+  liveBuses,
+  handleSpawnBus,
+  handleRemoveLiveBus,
+  handleRemoveAllLiveBuses,
+  onSelectLiveBus,
+  selectedLiveBusId,
+  preSelectedBus,
+  setPreSelectedBus,
   showStops,
   setShowStops,
   visibleMarkersCount,
@@ -75,7 +94,7 @@ export function SidebarControls({
       <div className="flex rounded-lg bg-slate-100 p-1">
         <button
           onClick={() => setActiveTab("buses")}
-          className={`flex flex-1 items-center justify-center gap-2 rounded-md py-1.5 text-xs font-medium transition-all ${
+          className={`flex flex-1 items-center justify-center gap-1.5 rounded-md py-1.5 text-[11px] font-medium transition-all ${
             activeTab === "buses"
               ? "border border-slate-200/40 bg-white text-slate-900 shadow-xs"
               : "text-slate-500 hover:text-slate-800"
@@ -86,7 +105,7 @@ export function SidebarControls({
         </button>
         <button
           onClick={() => setActiveTab("stops")}
-          className={`flex flex-1 items-center justify-center gap-2 rounded-md py-1.5 text-xs font-medium transition-all ${
+          className={`flex flex-1 items-center justify-center gap-1.5 rounded-md py-1.5 text-[11px] font-medium transition-all ${
             activeTab === "stops"
               ? "border border-slate-200/40 bg-white text-slate-900 shadow-xs"
               : "text-slate-500 hover:text-slate-800"
@@ -95,11 +114,22 @@ export function SidebarControls({
           <Navigation className="h-3.5 w-3.5" />
           Stops
         </button>
+        <button
+          onClick={() => setActiveTab("live")}
+          className={`flex flex-1 items-center justify-center gap-1.5 rounded-md py-1.5 text-[11px] font-medium transition-all ${
+            activeTab === "live"
+              ? "border border-slate-200/40 bg-white text-emerald-600 shadow-xs"
+              : "text-slate-500 hover:text-emerald-600"
+          }`}
+        >
+          <Radio className="h-3.5 w-3.5" />
+          Live
+        </button>
       </div>
 
       {/* CORE CONTENT LAYERS */}
       <div className="flex flex-1 flex-col gap-4 overflow-y-auto">
-        {activeTab === "buses" ? (
+        {activeTab === "buses" && (
           <BusTabPanel
             busSearchQuery={busSearchQuery}
             setBusSearchQuery={setBusSearchQuery}
@@ -112,7 +142,8 @@ export function SidebarControls({
             handleSelectBus={handleSelectBus}
             busDropdownRef={busDropdownRef}
           />
-        ) : (
+        )}
+        {activeTab === "stops" && (
           <StopsTabPanel
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
@@ -124,6 +155,23 @@ export function SidebarControls({
             showStops={showStops}
             setShowStops={setShowStops}
             isBusSelected={!!selectedBus}
+            onSpawnBus={handleSpawnBus}
+            onPreSelectBus={(routeCode, stopName) => {
+              setPreSelectedBus({ routeCode, stopName })
+              setActiveTab("live")
+            }}
+          />
+        )}
+        {activeTab === "live" && (
+          <LiveBusTabPanel
+            liveBuses={liveBuses}
+            onSpawnBus={handleSpawnBus}
+            onRemoveBus={handleRemoveLiveBus}
+            onRemoveAllBuses={handleRemoveAllLiveBuses}
+            onSelectBus={onSelectLiveBus}
+            selectedBusId={selectedLiveBusId}
+            preSelectedBus={preSelectedBus}
+            onClearPreSelected={() => setPreSelectedBus(null)}
           />
         )}
       </div>
