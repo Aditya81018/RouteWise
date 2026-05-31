@@ -1,6 +1,11 @@
 import { useTheme } from "next-themes"
-import { createContext, useEffect, useRef, useState, type ReactNode } from "react"
-import type mapboxgl from "mapbox-gl"
+import {
+  createContext,
+  useEffect,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react"
 import { mapgl, detectedLibrary } from "./map-library"
 import { Globe } from "lucide-react"
 import {
@@ -75,7 +80,8 @@ export const Map = ({
     if (style) {
       return style
     }
-    const defaults = detectedLibrary === "maplibre" ? defaultMapLibreStyles : defaultMapStyles
+    const defaults =
+      detectedLibrary === "maplibre" ? defaultMapLibreStyles : defaultMapStyles
     const darkStyle = styles?.dark ?? defaults.dark
     const lightStyle = styles?.light ?? defaults.light
 
@@ -154,12 +160,19 @@ export const Map = ({
 
     try {
       const container = containerRef.current
-      const originalGetBoundingClientRect = container.getBoundingClientRect.bind(container)
+      const originalGetBoundingClientRect =
+        container.getBoundingClientRect.bind(container)
       container.getBoundingClientRect = () => {
         const rect = originalGetBoundingClientRect()
         const width = container.offsetWidth
         const height = container.offsetHeight
-        return { ...rect, width, height, right: rect.left + width, bottom: rect.top + height }
+        return {
+          ...rect,
+          width,
+          height,
+          right: rect.left + width,
+          bottom: rect.top + height,
+        }
       }
 
       const mapInstance = createMapInstance(container)
@@ -168,7 +181,8 @@ export const Map = ({
       mapRef.current = mapInstance
 
       return () => {
-        delete (container as unknown as Record<string, unknown>).getBoundingClientRect
+        delete (container as unknown as Record<string, unknown>)
+          .getBoundingClientRect
         cleanupMap(mapInstance)
       }
     } catch (err) {
@@ -286,9 +300,9 @@ export const Map = ({
 
   if (error) {
     return (
-      <div className="relative w-full h-full">
+      <div className="relative h-full w-full">
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-destructive text-sm">{error}</div>
+          <div className="text-sm text-destructive">{error}</div>
         </div>
       </div>
     )
@@ -296,7 +310,7 @@ export const Map = ({
 
   return (
     <MapContext.Provider value={contextValue}>
-      <div ref={containerRef} className="relative w-full h-full">
+      <div ref={containerRef} className="relative h-full w-full">
         {shouldShowLoader && (loader || <DefaultLoader />)}
         {mapRef.current && children}
       </div>
@@ -307,7 +321,7 @@ export const Map = ({
 const DefaultLoader = () => {
   return (
     <div className="absolute inset-0 z-10 flex items-center justify-center bg-muted">
-      <Globe className="size-8 text-muted-foreground/60 animate-spin" />
+      <Globe className="size-8 animate-spin text-muted-foreground/60" />
     </div>
   )
 }

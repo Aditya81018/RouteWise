@@ -1,0 +1,4298 @@
+{
+  "10 Mile Bazar": null,
+  "10 No Majhipara": null,
+  "11 Mile": null,
+  "2 No Tank": [
+    22.5962451,
+    88.4280948
+  ],
+  "4 No Bridge": null,
+  "45 Bus Stand": [
+    22.4712456,
+    88.3772501
+  ],
+  "58 Gate": [
+    22.6152644,
+    88.377858
+  ],
+  "5no Haat": null,
+  "7 Mile Bazar": null,
+  "8 No Kalibari": null,
+  "Aantpur": null,
+  "Abadanga": null,
+  "Abhirampur": [
+    22.4649984,
+    88.1693867
+  ],
+  "Abhirmapur": null,
+  "Acharipara": null,
+  "Achipur": [
+    22.4509742,
+    88.1290561
+  ],
+  "Acropolis Mall": [
+    22.5153173,
+    88.3932448
+  ],
+  "Adampur": null,
+  "Addhabazar": null,
+  "Adharmanik": null,
+  "Adhata": null,
+  "Adisaptagram": [
+    22.9549222,
+    88.3789569
+  ],
+  "Agarhati": null,
+  "Agarpara Station": [
+    22.6828782,
+    88.3853645
+  ],
+  "Agunshi": null,
+  "Ahiran": null,
+  "Ahiritola": [
+    22.5963972,
+    88.3532985
+  ],
+  "Ahmadpur": null,
+  "Airport": [
+    22.5338013,
+    88.3966779
+  ],
+  "Airport Domestic Terminus": null,
+  "Airport Gate": [
+    22.653524,
+    88.4390752
+  ],
+  "Airport Gate 1": [
+    22.647,
+    88.441
+  ],
+  "Airport Gate 2.5": null,
+  "Airport Gate 3": null,
+  "Airport Terminal": null,
+  "Ajaynagar": null,
+  "Akanksha": [
+    22.6217076,
+    88.468781
+  ],
+  "Akashbani Bhawan": null,
+  "Akhratala": null,
+  "Akhro": null,
+  "Akhuta": null,
+  "Akra Bazar": null,
+  "Akra Fatak": null,
+  "Akra Rabindra Nagar": null,
+  "Akra Station": [
+    22.5147366,
+    88.2492787
+  ],
+  "Akupurchoti": null,
+  "Alambazar": null,
+  "Alampur": [
+    22.3079968,
+    88.4548914
+  ],
+  "Aliah University": [
+    22.5904353,
+    88.4857236
+  ],
+  "Alipore Court": [
+    22.5237938,
+    88.3327225
+  ],
+  "Alipore Zoo": [
+    22.536,
+    88.332
+  ],
+  "Alipurduar": null,
+  "Alisha Bus Stand": null,
+  "Alutia": null,
+  "Alutiya": null,
+  "Ambikanagar": null,
+  "Amdanga": [
+    22.7759686,
+    88.4715292
+  ],
+  "Amdobe": null,
+  "Amherst Street": null,
+  "Aminpur": null,
+  "Amity University": [
+    22.5959131,
+    88.4878653
+  ],
+  "Amjhara": null,
+  "Amkola": null,
+  "Amladahi Bazar": null,
+  "Amlagora": null,
+  "Amlashuli": null,
+  "Amrabati": null,
+  "Amta": [
+    22.5582414,
+    88.0867092
+  ],
+  "Amtala": [
+    22.6332155,
+    88.4090091
+  ],
+  "Amtala Phari": [
+    22.5634712,
+    88.3016089
+  ],
+  "Amtalya": null,
+  "Anandapur": [
+    22.509,
+    88.403
+  ],
+  "Anandpur Bypass": null,
+  "Anantapur": [
+    22.584268,
+    88.558746
+  ],
+  "Anara": null,
+  "Anchna": null,
+  "Andal": null,
+  "Andharia": [
+    22.3774884,
+    88.4073027
+  ],
+  "Andharishole": null,
+  "Andul Bazar": null,
+  "Andul Station": [
+    22.5757025,
+    88.2394462
+  ],
+  "Angarsone": null,
+  "Angrail": null,
+  "Aniya": null,
+  "Ankhro": null,
+  "Ankurhati": null,
+  "Antara Mental Hospital": null,
+  "Antila Bridge": null,
+  "Anwar Shah Road": [
+    22.502,
+    88.3495
+  ],
+  "Apollo Hospital": [
+    22.5743908,
+    88.4016701
+  ],
+  "Aquatica": [
+    22.5626901,
+    88.4646935
+  ],
+  "Arambagh": [
+    22.8855211,
+    87.7847127
+  ],
+  "Aranghata": null,
+  "Arapanch": [
+    22.4347707,
+    88.4718313
+  ],
+  "Argori": null,
+  "Ariadaha": [
+    22.6674338,
+    88.3672058
+  ],
+  "Asansol": null,
+  "Asansol Bus Stand": null,
+  "Ashari": null,
+  "Asharu Bazar": null,
+  "Ashoknagar": [
+    22.9416351,
+    88.6349004
+  ],
+  "Ashoknagar Chowrangi": null,
+  "Ashoknagar Station": null,
+  "Ashubabu Bazar": null,
+  "Ashwini Nagar": null,
+  "Atghora": null,
+  "Atharobanki": null,
+  "Aturia": null,
+  "Aturia Bazar": null,
+  "Aulia": null,
+  "Aushbali": null,
+  "Aushgram": null,
+  "Authpur": null,
+  "Auxilium Parish Church": [
+    22.5436566,
+    88.3820274
+  ],
+  "Avani Mall": [
+    22.5631999,
+    88.323604
+  ],
+  "Awalsiddhi": null,
+  "Axis Mall": [
+    22.5795016,
+    88.459921
+  ],
+  "Azabnagar": null,
+  "B Garden": [
+    22.5571809,
+    88.3010388
+  ],
+  "BBD Bag": [
+    22.5697,
+    88.3486
+  ],
+  "BK Paul": [
+    22.4912384,
+    88.311764
+  ],
+  "BNR Hospital": [
+    22.5461743,
+    88.3101495
+  ],
+  "BT College": [
+    22.7268256,
+    88.3809912
+  ],
+  "Babanpur": null,
+  "Bablatala": null,
+  "Babubazar": null,
+  "Babughat": [
+    22.5679041,
+    88.3412882
+  ],
+  "Baburhat": null,
+  "Badamtala": [
+    22.4604866,
+    88.3648898
+  ],
+  "Badarhat": null,
+  "Badartala": null,
+  "Badir": null,
+  "Badu Bazar": null,
+  "Baduria": null,
+  "Baduria Bazar": null,
+  "Bagaria": null,
+  "Bagbazar": [
+    22.601,
+    88.365
+  ],
+  "Bagdah": null,
+  "Bagdogra": null,
+  "Baghajatin": [
+    22.479,
+    88.387
+  ],
+  "Baghmundi": null,
+  "Baghnapara": null,
+  "Bagirhat": null,
+  "Bagjola Bazar": null,
+  "Bagkhal": null,
+  "Bagmari Bazar": null,
+  "Bagmore": null,
+  "Bagna": null,
+  "Bagnan": [
+    22.9322435,
+    88.1442705
+  ],
+  "Bagrakot": null,
+  "Baguiati": [
+    22.613,
+    88.431
+  ],
+  "Bagula": null,
+  "Bagulakhali": null,
+  "Bahadurpur": null,
+  "Baharu": null,
+  "Bahiri": null,
+  "Bahirsona": null,
+  "Baidyapur Garage": null,
+  "Baidyapur Talar": null,
+  "Baikunthapur": [
+    22.4326597,
+    88.4228216
+  ],
+  "Bailani Bazar": null,
+  "Bainchi": null,
+  "Baisakhi": [
+    22.6552872,
+    88.3953079
+  ],
+  "Baisnabghata": null,
+  "Baita": null,
+  "Bajitpur": null,
+  "Bajkul": null,
+  "Bajubandh": null,
+  "Bakeshwar": null,
+  "Bakhrahat": null,
+  "Bakkhali": null,
+  "Bakrahat": null,
+  "Baksara": [
+    22.5774155,
+    88.2915914
+  ],
+  "Bakshi": null,
+  "Bakulia": [
+    23.1642301,
+    88.3808739
+  ],
+  "Bakultala": [
+    22.4840184,
+    88.3023908
+  ],
+  "Balakhali": null,
+  "Balgona": null,
+  "Balichak": null,
+  "Baligeria": null,
+  "Balighai": null,
+  "Balikhali": null,
+  "Balisai": null,
+  "Balivasa": null,
+  "Bally": [
+    22.6469581,
+    88.343612
+  ],
+  "Bally Bazar": null,
+  "Ballyghat": null,
+  "Ballygunge Phari": [
+    22.5248807,
+    88.3658114
+  ],
+  "Ballygunge Station": [
+    22.529,
+    88.365
+  ],
+  "Ballyhalt": null,
+  "Ballykhal": null,
+  "Balsi": null,
+  "Balti Bazar": null,
+  "Baltikuri": [
+    22.6094016,
+    88.2961287
+  ],
+  "Baluhati": [
+    22.659215,
+    88.2669537
+  ],
+  "Balurghat": [
+    22.5810658,
+    88.4247742
+  ],
+  "Bamangachi": [
+    22.7494881,
+    88.5093006
+  ],
+  "Bamanpukur": null,
+  "Bamunia": [
+    22.5350172,
+    88.5563533
+  ],
+  "Banagram": [
+    22.4463029,
+    88.284084
+  ],
+  "Banamalipur": [
+    22.763107,
+    88.1957544
+  ],
+  "Bananabagram": null,
+  "Banbania": null,
+  "Banbania Chowmatha": null,
+  "Bandar": [
+    22.6473058,
+    88.4373029
+  ],
+  "Bandel": [
+    22.9226381,
+    88.3877415
+  ],
+  "Bandha Ghat": null,
+  "Bandowan": null,
+  "Banduan": null,
+  "Baneshwarpur": null,
+  "Bangachatra": null,
+  "Bangla": [
+    22.5449044,
+    88.3978511
+  ],
+  "Bangur Avenue": [
+    22.616,
+    88.406
+  ],
+  "Banipur": [
+    22.7337174,
+    88.1648111
+  ],
+  "Bank Of India": [
+    22.5937785,
+    88.3876333
+  ],
+  "Bankadaha": null,
+  "Bankra": [
+    22.6118184,
+    88.2752296
+  ],
+  "Bankra Bazar": null,
+  "Bankura": null,
+  "Bankura Bus Stand": null,
+  "Bankura Bypass": null,
+  "Bankura Pump": null,
+  "Bankura Station": null,
+  "Bansbhberia": null,
+  "Bansdroni": [
+    22.48,
+    88.365
+  ],
+  "Banspahari": null,
+  "Banstala": [
+    22.5826626,
+    88.3567931
+  ],
+  "Bantala Bazar": null,
+  "Bantul": null,
+  "Barabazar": [
+    22.576,
+    88.353
+  ],
+  "Barajaguli": [
+    22.9360788,
+    88.4831285
+  ],
+  "Barakar": null,
+  "Baranagar": [
+    22.6530765,
+    88.3805962
+  ],
+  "Baranagar Bazar": null,
+  "Barasat": [
+    22.724,
+    88.481
+  ],
+  "Barasat Chapadali": null,
+  "Barasat Colony": null,
+  "Barasat Dakbunglow": null,
+  "Barbaria": null,
+  "Barddhaman": [
+    22.5239336,
+    88.32581
+  ],
+  "Barddhaman Alisha Bus Stand": null,
+  "Barddhaman Birhata": null,
+  "Barddhaman Bypass": null,
+  "Barddhaman Nababhat": null,
+  "Barddhaman Natunhat": null,
+  "Barddhaman Nawabhat": null,
+  "Barddhaman Nawabhat Bus Stand": null,
+  "Barddhaman Station": null,
+  "Barddhaman Tinkonia": null,
+  "Bardhaman": null,
+  "Bardhaman Station": null,
+  "Bardhhaman": null,
+  "Bardhhaman Bypass": null,
+  "Bardhhaman Station": null,
+  "Bargachia": [
+    22.6667486,
+    88.1380703
+  ],
+  "Bargram": null,
+  "Baria": [
+    22.957871,
+    88.3953371
+  ],
+  "Barisha": [
+    22.4792468,
+    88.3118473
+  ],
+  "Barjora": null,
+  "Barnaberia": null,
+  "Barrackpore": [
+    22.6564623,
+    88.4467245
+  ],
+  "Barrackpore Chiria": null,
+  "Barrackpore Court": [
+    22.7622868,
+    88.3636093
+  ],
+  "Barrackpore Station": [
+    22.7603363,
+    88.3710985
+  ],
+  "Barshal": null,
+  "Baruipur": [
+    22.3607154,
+    88.4325575
+  ],
+  "Baruipur Hospital": [
+    22.359177,
+    88.4335616
+  ],
+  "Baruipur Station": [
+    22.3663286,
+    88.4312776
+  ],
+  "Barun Sengupta": [
+    22.5438072,
+    88.3992762
+  ],
+  "Basantapur": null,
+  "Basanti": [
+    22.5238636,
+    88.4538542
+  ],
+  "Basanti Bridge": null,
+  "Basanti Chowmatha": null,
+  "Basapara": null,
+  "Bashiram Bazar": null,
+  "Basirhat": null,
+  "Basirhat Chowmatha": null,
+  "Basirhat Station": null,
+  "Basubati": [
+    22.7825359,
+    88.203042
+  ],
+  "Basubati Darbar Sharif": null,
+  "Basudebpur": [
+    22.5176482,
+    88.131751
+  ],
+  "Basudha": null,
+  "Bata": [
+    22.5911506,
+    88.3928357
+  ],
+  "Bataitala Bridge": null,
+  "Bataitala Phari": null,
+  "Batanagar": [
+    22.5132661,
+    88.2229919
+  ],
+  "Batar": null,
+  "Bawali": null,
+  "Bazetaraf": null,
+  "Beadon Street": null,
+  "Beck Bagan": null,
+  "Behala": [
+    22.501572,
+    88.3209435
+  ],
+  "Behala 14 No": [
+    22.506,
+    88.317
+  ],
+  "Behala Airport": [
+    22.5054448,
+    88.2940087
+  ],
+  "Behala Bazar": [
+    22.4987631,
+    88.3173828
+  ],
+  "Behala Chowrasta": [
+    22.498,
+    88.311
+  ],
+  "Behala Manton": [
+    22.4948331,
+    88.3164005
+  ],
+  "Behala PS": null,
+  "Behala Tram Depot": [
+    22.499411,
+    88.3177975
+  ],
+  "Belda": null,
+  "Beldanga": null,
+  "Beleghata": [
+    22.564,
+    88.406
+  ],
+  "Beleghata Building": null,
+  "Belepole": [
+    22.5781297,
+    88.3054629
+  ],
+  "Belgachi": null,
+  "Belgachia": [
+    22.601,
+    88.385
+  ],
+  "Belgaon": null,
+  "Belgharia": [
+    22.6603642,
+    88.3857189
+  ],
+  "Belgharia Badamtala": null,
+  "Belgharia Expressway": null,
+  "Belgharia Rathtala": null,
+  "Belgharia Station": [
+    22.6613608,
+    88.3892144
+  ],
+  "Beliatore": null,
+  "Belilious Road": [
+    22.5929046,
+    88.3247676
+  ],
+  "Belmuri": [
+    22.9324208,
+    88.1524178
+  ],
+  "Belmuri Station": [
+    22.9324208,
+    88.1524178
+  ],
+  "Belpahari": null,
+  "Belpukur": null,
+  "Belsingha": null,
+  "Belu": null,
+  "Belurmath": null,
+  "Benachity": null,
+  "Benar": null,
+  "Bengai": null,
+  "Bengal Chemical": [
+    22.5800666,
+    88.4012962
+  ],
+  "Bentinck Street": [
+    22.5677076,
+    88.352537
+  ],
+  "Beraberi": null,
+  "Beraberia": [
+    22.7672735,
+    88.4433736
+  ],
+  "Berachampa": null,
+  "Berhampore": null,
+  "Beri Gopalpur": null,
+  "Berui": null,
+  "Betai": null,
+  "Betai Bandar": null,
+  "Betberia Belegachi": null,
+  "Bethpukur": null,
+  "Bethuadahari": null,
+  "Betore": null,
+  "Bhabani Bhawan": null,
+  "Bhabla Station": null,
+  "Bhadrakali": [
+    22.6743642,
+    88.3432884
+  ],
+  "Bhadura": null,
+  "Bhadutala": null,
+  "Bhagabanpur": [
+    22.4985141,
+    88.4276296
+  ],
+  "Bhagabatipur": [
+    22.6954496,
+    88.1889003
+  ],
+  "Bhagar": null,
+  "Bhagra": null,
+  "Bhairabpur": null,
+  "Bhalkundi": null,
+  "Bhaluka Battala": null,
+  "Bhandardihi": null,
+  "Bhandarkhali": null,
+  "Bhandergacha": null,
+  "Bhanderhati": null,
+  "Bhangankhali": null,
+  "Bhangore": null,
+  "Bharatpur": null,
+  "Bhasa Mandir": null,
+  "Bhasa Panchrasta Bazar": null,
+  "Bhasha 14no": null,
+  "Bhasraghat": null,
+  "Bhastara": null,
+  "Bhatakul": null,
+  "Bhatar": null,
+  "Bhatpara": [
+    22.8464418,
+    88.3856781
+  ],
+  "Bhattanagar": [
+    22.6327475,
+    88.3054766
+  ],
+  "Bhawanichak": null,
+  "Bhebia Chowrasta": null,
+  "Bhedia": null,
+  "Bhikdas": null,
+  "Bhiringi": null,
+  "Bhojerhat": null,
+  "Bhojpur": null,
+  "Bholamari": null,
+  "Bhomboler": null,
+  "Bhopur": null,
+  "Bhotgram": null,
+  "Bhowani Bhawan": null,
+  "Bhowanipore": [
+    22.5325844,
+    88.3454429
+  ],
+  "Bhubaneshwari": null,
+  "Bhupatinagar": null,
+  "Bibibazar": null,
+  "Bibirhat": null,
+  "Bichali Ghat": [
+    22.5502373,
+    88.2853264
+  ],
+  "Bidichandrapur": null,
+  "Bidyut Bhawan": null,
+  "Bijaygunge Bazar": null,
+  "Bijoygarh": [
+    22.4872704,
+    88.3685589
+  ],
+  "Bikash Bhawan": null,
+  "Bikrampur": null,
+  "Bindopur": null,
+  "Binodbati": null,
+  "Binodia": null,
+  "Binodpur": null,
+  "Binpur": null,
+  "Biprasekhar": null,
+  "Bira": [
+    22.7897513,
+    88.5722344
+  ],
+  "Bira Chowmatha": null,
+  "Biradingi": [
+    22.6142314,
+    88.3124249
+  ],
+  "Biramnagar": null,
+  "Birati": [
+    22.6564623,
+    88.4467245
+  ],
+  "Birati Station": [
+    22.6643198,
+    88.4274959
+  ],
+  "Birati Tantkal": null,
+  "Birchandrapur": null,
+  "Birhata": null,
+  "Birla": [
+    22.530487,
+    88.3649562
+  ],
+  "Birlapur": null,
+  "Birshibpur": [
+    22.4725891,
+    88.0484247
+  ],
+  "Bisalakshmitala": null,
+  "Bisharpara": [
+    22.676678,
+    88.4349544
+  ],
+  "Bishnupur": null,
+  "Bishnupur PS": null,
+  "Bishpuria": null,
+  "Bishpuriya": null,
+  "Bisunupur": null,
+  "Biswashati": null,
+  "Bithari": null,
+  "Bkrampur": null,
+  "Boalghata": null,
+  "Boalia": [
+    22.4562973,
+    88.4022259
+  ],
+  "Boardghar": null,
+  "Bodra": [
+    22.4445774,
+    88.6152717
+  ],
+  "Boga": null,
+  "Bohar": null,
+  "Bohara": null,
+  "Bokchora": null,
+  "Boldeghata": null,
+  "Bolgona": null,
+  "Bolpur": null,
+  "Bolpur Bus Stand": null,
+  "Bondel Gate": null,
+  "Bongaon": [
+    22.9330714,
+    88.4574348
+  ],
+  "Bongaon 1 No Railgate Petrol Pump": null,
+  "Bongaon Bus Stand": null,
+  "Bonhooghly": [
+    22.636,
+    88.382
+  ],
+  "Bononabagram": null,
+  "Boralighat": null,
+  "Borda Choukan": null,
+  "Borhal": null,
+  "Borjora": null,
+  "Boro": [
+    22.5702452,
+    88.2183536
+  ],
+  "Boro Andulia": null,
+  "Boro Finga": null,
+  "Borobelun": null,
+  "Boropara": null,
+  "Bosepukur": [
+    22.5192878,
+    88.3853346
+  ],
+  "Bostom": null,
+  "Bowbazar": [
+    22.5704924,
+    88.3615602
+  ],
+  "Boyermari": null,
+  "Boyra": null,
+  "Brace Bridge": [
+    22.5179206,
+    88.3011366
+  ],
+  "Brahmaner": null,
+  "Brajalalchak": null,
+  "Brindabanpur": [
+    22.501534,
+    88.099073
+  ],
+  "Budbud": null,
+  "Budbudm": null,
+  "Budge Budge": [
+    22.4736567,
+    88.173933
+  ],
+  "Budhigram": null,
+  "Budhpur": null,
+  "Bulbulitala": null,
+  "Bulchandpur": null,
+  "Bundu": null,
+  "Buniadpur": null,
+  "Burdwan": [
+    22.5222876,
+    88.3302996
+  ],
+  "Burdwan Bypass": null,
+  "Burdwan Road": [
+    22.5222876,
+    88.3302996
+  ],
+  "Burul": null,
+  "Burul Bazar": null,
+  "Burwan": null,
+  "CIT Road": [
+    22.5488777,
+    88.3708209
+  ],
+  "Calcium": null,
+  "Calcutta Leather Complex": null,
+  "Cancer Hospital": [
+    22.5267338,
+    88.3884232
+  ],
+  "Canning": [
+    22.5791379,
+    88.3469231
+  ],
+  "Canning Station": null,
+  "Carry Road": [
+    22.5679349,
+    88.303535
+  ],
+  "Central": [
+    22.573,
+    88.354
+  ],
+  "Central Avenue": [
+    22.5731374,
+    88.3647355
+  ],
+  "Central Jail": [
+    22.5251726,
+    88.3395697
+  ],
+  "Central Park": [
+    22.4935602,
+    88.362528
+  ],
+  "Chagram": null,
+  "Chagulia": null,
+  "Chaipat": null,
+  "Chaital": null,
+  "Chaital Ghat": null,
+  "Chaitanyapur": null,
+  "Chakberia": [
+    22.4417121,
+    88.4342313
+  ],
+  "Chakdah": [
+    22.4708431,
+    88.3503816
+  ],
+  "Chakdulalpur": null,
+  "Chakla": null,
+  "Chaksimla": null,
+  "Chakta": null,
+  "Chalki Bazar": null,
+  "Chalti": null,
+  "Chamkaitala": null,
+  "Champadanga": null,
+  "Chamrail": [
+    22.6419627,
+    88.3024473
+  ],
+  "Chanchal": [
+    22.4923069,
+    88.385374
+  ],
+  "Chanda": [
+    22.8849806,
+    88.6582276
+  ],
+  "Chandaneshwar": null,
+  "Chander": null,
+  "Chandipur": [
+    22.4382364,
+    88.1724087
+  ],
+  "Chanditala": [
+    22.4880163,
+    88.3479834
+  ],
+  "Chandkhali": [
+    22.3120949,
+    88.4630277
+  ],
+  "Chandni Chowk": [
+    22.567,
+    88.352
+  ],
+  "Chandpara": null,
+  "Chandpur": [
+    22.4496513,
+    88.4503834
+  ],
+  "Chandra": [
+    22.5281937,
+    88.3210288
+  ],
+  "Chandrachur Bypass": null,
+  "Chandrakona Road": null,
+  "Chandrakona Town": null,
+  "Chandranagar": null,
+  "Chandrapur": [
+    22.7651641,
+    88.5358454
+  ],
+  "Chandua Bazar": null,
+  "Chapaberia": null,
+  "Chapadanga": null,
+  "Chapatala": null,
+  "Chapra": null,
+  "Chapuria": null,
+  "Charabidya": null,
+  "Charapole": [
+    22.9274119,
+    88.4669853
+  ],
+  "Charial": [
+    22.4631742,
+    88.1846757
+  ],
+  "Chariswar": [
+    22.5211072,
+    88.5432203
+  ],
+  "Chas": null,
+  "Chatna": null,
+  "Chatra": [
+    22.4644352,
+    88.3713228
+  ],
+  "Chatra Bazar": null,
+  "Chaulkhola": null,
+  "Chaurangi": null,
+  "Chemaguri": null,
+  "Chetla Park": [
+    22.5171755,
+    88.3362457
+  ],
+  "Chhatna": null,
+  "Chhatni": null,
+  "China Mandir": [
+    22.6107602,
+    88.4072926
+  ],
+  "Chinar Park": [
+    22.6236525,
+    88.4409538
+  ],
+  "Chingrighata": [
+    22.578,
+    88.415
+  ],
+  "Chinsurah Court": null,
+  "Chinsurah Station": null,
+  "Chiria": [
+    22.6187242,
+    88.3793002
+  ],
+  "Chitpur": [
+    22.6161562,
+    88.3711362
+  ],
+  "Chitpur Bridge": null,
+  "Chitra": [
+    22.6225588,
+    88.4019879
+  ],
+  "Chitradhali": null,
+  "Chittaranjan": [
+    22.5252694,
+    88.3466423
+  ],
+  "Chittaranjan Hospital": [
+    22.5252694,
+    88.3466423
+  ],
+  "Choatia": null,
+  "Chongda": null,
+  "Chora": null,
+  "Chora Hattala": null,
+  "Choto Finga": null,
+  "Choubeta": null,
+  "Chouhatta": null,
+  "Choulpatty": null,
+  "Choumukhi": null,
+  "Choutara": null,
+  "Chowalkhola": null,
+  "Chowbaga": [
+    22.5271645,
+    88.4191964
+  ],
+  "Chowdhury Chak": null,
+  "Chowmuha": null,
+  "Chowringhee": [
+    22.5591287,
+    88.3504155
+  ],
+  "Christopher Road": [
+    22.5470331,
+    88.3834346
+  ],
+  "Chunakhali": null,
+  "Chunavati": [
+    22.5680844,
+    88.2680662
+  ],
+  "Chundi": null,
+  "City Center 1": [
+    22.59251,
+    88.3918588
+  ],
+  "City Center 2": [
+    22.5447914,
+    88.3547113
+  ],
+  "College More": [
+    22.577,
+    88.429
+  ],
+  "College Street": [
+    22.575,
+    88.364
+  ],
+  "Colony Bazar": [
+    22.570831,
+    88.3752802
+  ],
+  "Command Hospital": [
+    22.5293853,
+    88.3305111
+  ],
+  "Companir Thek": null,
+  "Contai": null,
+  "Contai Bus Stand": null,
+  "Cooch Behar": null,
+  "Coronation Bridge": null,
+  "Cossipore": [
+    22.615,
+    88.368
+  ],
+  "Culture": [
+    22.515056,
+    88.3663994
+  ],
+  "Curzon Gate": null,
+  "DLF 1": [
+    22.5813836,
+    88.4507715
+  ],
+  "DLF 2": [
+    22.5659336,
+    88.5168683
+  ],
+  "Dadpur": [
+    22.2961443,
+    88.4276797
+  ],
+  "Dahijuri": null,
+  "Dainhat": null,
+  "Dakbangla": null,
+  "Dakbangla Hat": null,
+  "Dakbanglow": null,
+  "Dakbungalow Bazar": null,
+  "Dakghar": null,
+  "Dakshin Baharu": null,
+  "Dakshin Bari": null,
+  "Dakshin Battala": null,
+  "Dakshin Birampur": null,
+  "Dakshin Durgapur": [
+    22.3258194,
+    88.406271
+  ],
+  "Dakshin Khanda": null,
+  "Dakshin Padmerhat": null,
+  "Dakshin Ramkrishnapur": null,
+  "Dakshineswar": [
+    22.655,
+    88.357
+  ],
+  "Dalalpukur": [
+    22.5829377,
+    88.3114262
+  ],
+  "Dalanghata": null,
+  "Dalkhola": null,
+  "Dallpur": null,
+  "Damdim": null,
+  "Damodarpur Bazaar": null,
+  "Dandirhat": null,
+  "Danesh Shaikh Lane": null,
+  "Dankuni": [
+    22.6820899,
+    88.2907444
+  ],
+  "Dankuni Housing": null,
+  "Dankuni Station": [
+    22.6779609,
+    88.2907626
+  ],
+  "Dantan": null,
+  "Darbeshpur": null,
+  "Dariapur": null,
+  "Darjeeling": [
+    26.7159936,
+    88.4229271
+  ],
+  "Daroka": null,
+  "Dasghara": null,
+  "Dashadrone": null,
+  "Dasnagar": [
+    22.5981344,
+    88.3048369
+  ],
+  "Daspara": [
+    22.7543397,
+    88.2230494
+  ],
+  "Daspur": null,
+  "Dayarampur Bazar": null,
+  "Debagram": null,
+  "Debgram": null,
+  "Debipur": [
+    22.5049484,
+    88.6360347
+  ],
+  "Debpukur": null,
+  "Debpur": null,
+  "Debra": null,
+  "Deganga": [
+    22.6949937,
+    88.643509
+  ],
+  "Dehibatpur": null,
+  "Delhi Road": [
+    22.6806301,
+    88.3023878
+  ],
+  "Dendua": null,
+  "Deorah": null,
+  "Depal": null,
+  "Derozio College": [
+    22.6334467,
+    88.4582951
+  ],
+  "Deshapriya Park": [
+    22.5184354,
+    88.3535152
+  ],
+  "Deshbandhu Road": [
+    22.6465714,
+    88.3689186
+  ],
+  "Deular": null,
+  "Deuli": null,
+  "Deulia Bazar": null,
+  "Deulpara": null,
+  "Dewandighi": null,
+  "Deypara": null,
+  "Dhaban": null,
+  "Dhabani": null,
+  "Dhadika": null,
+  "Dhakuria": [
+    22.504,
+    88.368
+  ],
+  "Dhalai Bridge": null,
+  "Dhaldanga": null,
+  "Dhamakhali": null,
+  "Dhamisa": null,
+  "Dhaniakhali": [
+    22.9509954,
+    88.143874
+  ],
+  "Dhankalmath": null,
+  "Dhanmath": null,
+  "Dhanpota": null,
+  "Dhansimla": null,
+  "Dhantala": null,
+  "Dhapa Road": [
+    22.55791,
+    88.3885874
+  ],
+  "Dharampur": [
+    22.8963376,
+    88.6689298
+  ],
+  "Dharma": null,
+  "Dhatrigram": null,
+  "Dhelachandimore": null,
+  "Dherua": null,
+  "Dhibdhiba": null,
+  "Dhola": null,
+  "Dholahat": null,
+  "Dholmari Bazar": null,
+  "Dhopagachi": null,
+  "Dhrubabazar": null,
+  "Dhubilia": null,
+  "Dhubulia": null,
+  "Dhukrijhara": null,
+  "Dhulagarh": null,
+  "Dhulasimla": [
+    22.414738,
+    88.0936725
+  ],
+  "Dhulian": null,
+  "Dhuliyan": null,
+  "Dhulorbandh": null,
+  "Dhumsai": null,
+  "Dhupguri": null,
+  "Dhuri Bazar": null,
+  "Diamond Harbour": [
+    22.5376168,
+    88.3274679
+  ],
+  "Diamond Plaza": [
+    22.628,
+    88.415
+  ],
+  "Digha": [
+    22.7565605,
+    88.5287271
+  ],
+  "Dighirpar": [
+    22.9153113,
+    88.4445438
+  ],
+  "Dignagar": null,
+  "Dihibhursut": null,
+  "Dilakhash": null,
+  "Dinanathpur": null,
+  "Dishergarh": null,
+  "Dockghat": null,
+  "Dogachia": null,
+  "Doltala": [
+    22.9402249,
+    88.4219805
+  ],
+  "Domjur": [
+    22.6431635,
+    88.2095491
+  ],
+  "Domjur Bdo Office": null,
+  "Domra": null,
+  "Dongaria": null,
+  "Doordarshan Bhawan": null,
+  "Doperia": null,
+  "Dostipur": null,
+  "Dubrajpur": null,
+  "Dubrajpur Power House": null,
+  "Dulduli": null,
+  "Dumdum": [
+    22.642,
+    88.431
+  ],
+  "Dumdum Canton": null,
+  "Dumdum Cantonment": [
+    22.6369199,
+    88.4134504
+  ],
+  "Dumdum Chiriya": null,
+  "Dumdum Park": [
+    22.609,
+    88.414
+  ],
+  "Dumdum Station": null,
+  "Dumurdaha": [
+    23.040696,
+    88.4330295
+  ],
+  "Dumurjola": [
+    22.5887977,
+    88.3084751
+  ],
+  "Dunlop": [
+    22.644,
+    88.376
+  ],
+  "Dunlop Bridge": null,
+  "Durgachak": null,
+  "Durganagar": [
+    22.6504966,
+    88.4192153
+  ],
+  "Durgapur": [
+    22.5222297,
+    88.3204234
+  ],
+  "Durgapur Bridge": null,
+  "Durgapur City Center": null,
+  "Durgapur Expressway": [
+    22.6831161,
+    88.2970013
+  ],
+  "Durgapur Station": [
+    22.3258194,
+    88.406271
+  ],
+  "Durlavpur": null,
+  "Duttabagan": [
+    22.6073875,
+    88.3909822
+  ],
+  "Duttabazar": null,
+  "Duttapara": [
+    22.9304579,
+    88.6109145
+  ],
+  "Duttaphulia": null,
+  "Duttapukur": [
+    22.7697267,
+    88.5453683
+  ],
+  "Duttar Math": null,
+  "Dvc": [
+    22.5875055,
+    88.3915835
+  ],
+  "Dwariknagar": null,
+  "EM Bypass": [
+    22.4690721,
+    88.3912838
+  ],
+  "East Enclave": null,
+  "Ecopark": null,
+  "Ecospace": [
+    22.5859439,
+    88.4901863
+  ],
+  "Eden City": null,
+  "Eden Gardens": [
+    22.5646093,
+    88.3423371
+  ],
+  "Egra": null,
+  "Ekbalpur": [
+    22.535,
+    88.328
+  ],
+  "Eksara": null,
+  "Elgin": [
+    22.5373748,
+    88.3475617
+  ],
+  "Elgin Road": [
+    22.5380537,
+    88.3477884
+  ],
+  "Entally Market": null,
+  "Eroali": null,
+  "Esplanade": [
+    22.5645,
+    88.351
+  ],
+  "Exide": [
+    22.543,
+    88.352
+  ],
+  "FD": [
+    22.6078915,
+    88.3134207
+  ],
+  "Fakirtala": null,
+  "Falakata": null,
+  "Falta": null,
+  "Falta Sector 1": null,
+  "Farakka": null,
+  "Fatapukur": null,
+  "Fatehpur": [
+    22.9523923,
+    88.5991975
+  ],
+  "Fatepur": [
+    22.943483,
+    88.58905
+  ],
+  "Fatesinghpur": null,
+  "Fatikgachi": null,
+  "Fishery Gate": null,
+  "Foreshore Road": [
+    22.5823641,
+    88.3432201
+  ],
+  "Fort William": [
+    22.554,
+    88.341
+  ],
+  "Fortis": [
+    22.5203169,
+    88.4009544
+  ],
+  "Fortis Hospital": [
+    22.5203169,
+    88.4009544
+  ],
+  "Frasergunj": null,
+  "Frazerganj": null,
+  "Fulbari": null,
+  "Fulberia": null,
+  "Fulia": null,
+  "Fulkushma": null,
+  "Furfura Sharif": [
+    22.7486783,
+    88.1289435
+  ],
+  "Futisanko": null,
+  "G Ghati": null,
+  "GD": [
+    22.5622368,
+    88.3622351
+  ],
+  "GPO": [
+    22.5729578,
+    88.3477532
+  ],
+  "GST Bhawan": null,
+  "Gabberia": [
+    22.566693,
+    88.124477
+  ],
+  "Gabbuni": null,
+  "Gabtala Bazar": null,
+  "Gadamara": null,
+  "Gadarati": null,
+  "Gadiara": null,
+  "Gadkhali": null,
+  "Gaighata": [
+    22.9423761,
+    88.6402697
+  ],
+  "Gajar": null,
+  "Galsi": null,
+  "Gandharbapur": null,
+  "Gandhi Colony": [
+    22.4850465,
+    88.3583777
+  ],
+  "Ganesh Talkies": null,
+  "Ganga Nagar": [
+    22.4862875,
+    88.3406895
+  ],
+  "Gangadharpur": [
+    22.7603958,
+    88.2216864
+  ],
+  "Gangarampur": null,
+  "Gangasagar": null,
+  "Gangraguri": null,
+  "Ganjer Bazar": null,
+  "Ganrapota": null,
+  "Garapota": null,
+  "Garcha Road": [
+    22.5257486,
+    88.3645701
+  ],
+  "Garchumuk": null,
+  "Garden Reach": [
+    22.5350243,
+    88.2957688
+  ],
+  "Garfa Road": [
+    22.4978313,
+    88.3750732
+  ],
+  "Garh Bhowanipore": null,
+  "Garhbeta": null,
+  "Garia": [
+    22.4726577,
+    88.3977506
+  ],
+  "Garia Bazar": null,
+  "Garia Bus Stand": null,
+  "Garia Metro": [
+    22.468,
+    88.397
+  ],
+  "Garia Station": [
+    22.4726577,
+    88.3977506
+  ],
+  "Gariahat": [
+    22.517,
+    88.366
+  ],
+  "Garifa Road": null,
+  "Garpa": null,
+  "Gatebazar": null,
+  "Gawjar": null,
+  "Gayeshpur": [
+    22.9568708,
+    88.4961111
+  ],
+  "Gazna Bazar": null,
+  "Gazole": null,
+  "Ghasbagan": null,
+  "Ghasiara": [
+    22.4410829,
+    88.4464378
+  ],
+  "Ghatakpukur": null,
+  "Ghatal": null,
+  "Ghatboar": null,
+  "Ghatur": null,
+  "Ghola Bazar": null,
+  "Ghoradaha": null,
+  "Ghoraras Beltala": null,
+  "Ghorir": null,
+  "Ghoshpur": [
+    22.3928716,
+    88.4766264
+  ],
+  "Ghurni": null,
+  "Ghushighata": null,
+  "Girish Park": [
+    22.587,
+    88.362
+  ],
+  "Gitanjali": [
+    22.4694673,
+    88.3700115
+  ],
+  "Goakhali": null,
+  "Goalbagi": null,
+  "Goalbathan": null,
+  "Goaldaha": null,
+  "Goaltore": null,
+  "Gobardanga": null,
+  "Gobindapur": [
+    22.5031542,
+    88.3582154
+  ],
+  "Gobra": [
+    22.6961161,
+    88.2793898
+  ],
+  "Gobra Kabarsthan": null,
+  "Gocharan": [
+    22.2781335,
+    88.4586126
+  ],
+  "Godapiasal": null,
+  "Godapiashal": null,
+  "Goghat": null,
+  "Gogra": null,
+  "Gohal Beria": null,
+  "Gohaldaha": null,
+  "Gojar": null,
+  "Gokarna": null,
+  "Gokulpur": [
+    22.4569975,
+    88.6336414
+  ],
+  "Golabarai PS": null,
+  "Golabari": [
+    22.5932398,
+    88.3441315
+  ],
+  "Golapbag": null,
+  "Golatore": null,
+  "Golf Green": [
+    22.4913328,
+    88.3618382
+  ],
+  "Golpark": [
+    22.513,
+    88.365
+  ],
+  "Gontar": null,
+  "Gopalbati": null,
+  "Gopalnagar": [
+    22.5213296,
+    88.3376655
+  ],
+  "Gopalpur": [
+    22.3333956,
+    88.406136
+  ],
+  "Gopalpur Bazar": null,
+  "Gopalpur House": null,
+  "Gopiganj": null,
+  "Goundia Raghunathpur": null,
+  "Goura": null,
+  "Gourangachak": null,
+  "Gourangapur": null,
+  "Gourhati": null,
+  "Gouripur": null,
+  "Greenfield City": [
+    22.4953054,
+    88.2739768
+  ],
+  "Guaidaha": null,
+  "Gujarpur": null,
+  "Gukara": null,
+  "Guma": null,
+  "Guma Chowmatha": null,
+  "Gupinpur": null,
+  "Guptamoni": null,
+  "Gurap": [
+    22.9901236,
+    88.3676188
+  ],
+  "Gurdah": null,
+  "Gurguripal": null,
+  "Gurudaspur Hospital": null,
+  "Gurusaday Road": [
+    22.5336484,
+    88.3629022
+  ],
+  "Guskara": null,
+  "Guskara Bus Stand": null,
+  "Guskara College": null,
+  "Guskara Rail Gate": null,
+  "Gustia": null,
+  "HMG College": null,
+  "Habibpur": null,
+  "Habra": [
+    22.8789529,
+    88.4724036
+  ],
+  "Habra Depot": null,
+  "Habra Joygachi": null,
+  "Habra Manasabari": null,
+  "Habra Station": null,
+  "Hadipur": null,
+  "Hagnagari": null,
+  "Haidarpur": null,
+  "Hajipur": null,
+  "Hajratala": null,
+  "Hakimpur": null,
+  "Haldia": [
+    22.5635521,
+    88.3494759
+  ],
+  "Haldia Township": null,
+  "Haldirams": [
+    22.5329132,
+    88.3649818
+  ],
+  "Halid": null,
+  "Halisahar": [
+    22.9322475,
+    88.4248587
+  ],
+  "Haltu Bazar": null,
+  "Hamadama": null,
+  "Hamidpur": null,
+  "Hamirpur": null,
+  "Hanshkhali": null,
+  "Hansia": null,
+  "Hanskhali": null,
+  "Hanskhali Pole": null,
+  "Hanspukur": null,
+  "Hantal": [
+    22.6336088,
+    88.1428613
+  ],
+  "Hapania": [
+    22.9237716,
+    88.6462649
+  ],
+  "Haral": [
+    22.3866401,
+    88.4914691
+  ],
+  "Harda": null,
+  "Haribashor Park": null,
+  "Haridashpur": null,
+  "Haridevpur": [
+    22.4652952,
+    88.3311283
+  ],
+  "Harigram": null,
+  "Harinavi": [
+    22.4125168,
+    88.4185772
+  ],
+  "Harinbari": null,
+  "Harindanga": null,
+  "Harinkhola": null,
+  "Haripal Station": null,
+  "Haripur": null,
+  "Harishankarpur": null,
+  "Harishpur": null,
+  "Harit": [
+    22.918833,
+    88.257141
+  ],
+  "Haritala": null,
+  "Haritampur": null,
+  "Haroa Bazar": null,
+  "Haroa Bridge": null,
+  "Harop Bazar": null,
+  "Hashimnagar": null,
+  "Hasnabad": null,
+  "Hasnabad Station": null,
+  "Hasnan Bridge": null,
+  "Hastings": [
+    22.547,
+    88.334
+  ],
+  "Hatgacha": null,
+  "Hatgobindapur": null,
+  "Hatgobindopur": null,
+  "Hathatgange": null,
+  "Hatiara": [
+    22.6018735,
+    88.4531058
+  ],
+  "Hatibagan": [
+    22.5945,
+    88.372
+  ],
+  "Hatigeria": null,
+  "Hatikanda": [
+    22.9374966,
+    88.5196452
+  ],
+  "Hatirampur": null,
+  "Hatishala": null,
+  "Hattala Bazar": null,
+  "Hatthuba": null,
+  "Hatuganj": null,
+  "Hatugunge": null,
+  "Hatugunj": null,
+  "Hazra": [
+    22.5227232,
+    88.3499241
+  ],
+  "Hedua": [
+    22.5880064,
+    88.3689403
+  ],
+  "Helabattala": null,
+  "Helencha": null,
+  "Hemanta Mukhopadhyay": [
+    22.5148514,
+    88.4014276
+  ],
+  "Hematpur": null,
+  "Hemnagar": null,
+  "Henria": null,
+  "Heria": null,
+  "Hetampur": null,
+  "Hide Road": [
+    22.5316795,
+    88.3077329
+  ],
+  "High Court": [
+    22.5685797,
+    88.343498
+  ],
+  "Hiland Park": [
+    22.4847754,
+    88.3883928
+  ],
+  "Hind Cinema": [
+    22.5648701,
+    88.3590849
+  ],
+  "Hingalgunge": null,
+  "Hingjuri": null,
+  "Hiranmoypur": null,
+  "Hoglashi": null,
+  "Hooghly": [
+    22.8992251,
+    88.3921337
+  ],
+  "Hoomgarh": null,
+  "Hospital": null,
+  "Howrah Fire Station": null,
+  "Howrah Maidan": [
+    22.589,
+    88.334
+  ],
+  "Howrah Station": [
+    22.5838,
+    88.3426
+  ],
+  "Hura": null,
+  "IBM": [
+    22.5780567,
+    88.4870645
+  ],
+  "ILS Hospital": [
+    22.589302,
+    88.4109408
+  ],
+  "ITC Infotech": [
+    22.5480619,
+    88.519682
+  ],
+  "Icchapur": null,
+  "Ichapur": [
+    22.7998264,
+    88.3739103
+  ],
+  "Iim Joka": [
+    22.4440967,
+    88.3017146
+  ],
+  "Iimc Hospital": null,
+  "Ilambazar": null,
+  "Illambazar": null,
+  "Ilsoba": null,
+  "Inchura": null,
+  "Indian Statistical Institute": [
+    22.6477969,
+    88.3766405
+  ],
+  "Indpur": null,
+  "Indranarayanpur": null,
+  "Islampur": null,
+  "Iswarigacha": null,
+  "Itaberia": null,
+  "Itahar": null,
+  "Jadavpur": [
+    22.495499,
+    88.3709006
+  ],
+  "Jadavpur 8B": [
+    22.497,
+    88.371
+  ],
+  "Jadavpur PS": [
+    22.496,
+    88.369
+  ],
+  "Jadavpur University": [
+    22.4995309,
+    88.3715953
+  ],
+  "Jadurhati": null,
+  "Jagadishpur": [
+    22.4409911,
+    88.4562793
+  ],
+  "Jagadishpur Hospital": [
+    22.6193143,
+    88.300364
+  ],
+  "Jagaldaha": null,
+  "Jagannathpur": [
+    22.477106,
+    88.2621246
+  ],
+  "Jagardanga": null,
+  "Jagatballavpur": [
+    22.4427233,
+    88.1377339
+  ],
+  "Jagatdal": null,
+  "Jagulgachi": null,
+  "Jaguli": null,
+  "Jai Hind": [
+    22.6473058,
+    88.4373029
+  ],
+  "Jajigram": null,
+  "Jalaberia": null,
+  "Jalan Gate": null,
+  "Jalangi": null,
+  "Jalibagan": null,
+  "Jalilpur": null,
+  "Jalpaiguri Bypass": null,
+  "Jalpara": null,
+  "Jamalpur": [
+    22.4487669,
+    88.162287
+  ],
+  "Jamdani": null,
+  "James Long Sarani": [
+    22.5104002,
+    88.3230416
+  ],
+  "Jamirgachi": null,
+  "Jamna": null,
+  "Jamtala": null,
+  "Jamuria": null,
+  "Janakalyan": [
+    22.4846152,
+    88.3126603
+  ],
+  "Jangalpara": [
+    22.7320451,
+    88.2051515
+  ],
+  "Jangipara": null,
+  "Jangipur": null,
+  "Janha": null,
+  "Japani Gate": [
+    22.5790355,
+    88.42612
+  ],
+  "Jara": null,
+  "Jashoda": null,
+  "Jatin Das Park": [
+    22.5241535,
+    88.3464729
+  ],
+  "Jatragachi": null,
+  "Jayrambati": null,
+  "Jessore Road": [
+    22.6080961,
+    88.3942426
+  ],
+  "Jhakra": null,
+  "Jhalda": null,
+  "Jhargram": null,
+  "Jharkhali": null,
+  "Jhautala": [
+    22.5367706,
+    88.3655992
+  ],
+  "Jhawdanga": null,
+  "Jhikira": null,
+  "Jhikra": [
+    22.9028761,
+    88.6485235
+  ],
+  "Jhikra Battala": [
+    22.8869953,
+    88.6474323
+  ],
+  "Jhikra Bazar": null,
+  "Jhilimili": null,
+  "Jhinjhira Bazar": [
+    22.517233,
+    88.2978143
+  ],
+  "Jhorobati": null,
+  "Jibantala": null,
+  "Jibanti": null,
+  "Jirangachha": null,
+  "Jirat": [
+    23.097519,
+    88.4615651
+  ],
+  "Jitpur": null,
+  "Jiudhara": null,
+  "Jodhpur Park": [
+    22.5055,
+    88.3635
+  ],
+  "Jogeshganj Bazar": null,
+  "Jogi Battala": null,
+  "Joka": [
+    22.4440967,
+    88.3017146
+  ],
+  "Joka Bharat Sevashram Hospital": null,
+  "Joka Bridge": null,
+  "Joka Depot": [
+    22.4489274,
+    88.280047
+  ],
+  "Joka Esi": null,
+  "Joka Khalpole": null,
+  "Jora Amtala": null,
+  "Jora Girja": [
+    22.5549476,
+    88.3647845
+  ],
+  "Jorabagan": [
+    22.5903989,
+    88.3571238
+  ],
+  "Jorda": null,
+  "Jorhira": null,
+  "Joydev": null,
+  "Joygachi": null,
+  "Joygram": null,
+  "Joykrishna Bazar": null,
+  "Joykrishnapur": [
+    22.4421041,
+    88.3536484
+  ],
+  "Joynagar": [
+    22.3848887,
+    88.410831
+  ],
+  "Joypul": null,
+  "Joypul Bazar": null,
+  "Joypur": null,
+  "Joyrambati": null,
+  "Joyrampur": null,
+  "Jubilee": [
+    22.4931156,
+    88.3484486
+  ],
+  "Julpia": [
+    22.3652727,
+    88.3519698
+  ],
+  "Jumainaskar Hat": null,
+  "Jyangra": null,
+  "Jyotirindra Nandi": [
+    22.4956263,
+    88.398449
+  ],
+  "Jyotishpur": null,
+  "Kabardanga": null,
+  "Kable": null,
+  "Kachari Bazar": [
+    22.3663689,
+    88.4280906
+  ],
+  "Kachua": [
+    22.5291142,
+    88.5708897
+  ],
+  "Kachuberia": null,
+  "Kachuberia Sagar Island": null,
+  "Kachujor": null,
+  "Kadambagachi": [
+    22.709078,
+    88.539915
+  ],
+  "Kadamtala": [
+    22.4720547,
+    88.3092713
+  ],
+  "Kadapara": null,
+  "Kadasol": null,
+  "Kahankia": null,
+  "Kaichar": null,
+  "Kaijuri Bazar": null,
+  "Kaikhali": [
+    22.632,
+    88.437
+  ],
+  "Kajiberia": null,
+  "Kajla": [
+    22.8834237,
+    88.6524904
+  ],
+  "Kajoler": null,
+  "Kakdwip": null,
+  "Kakdwip Bus Stand": null,
+  "Kakdwip Station": null,
+  "Kalaberia": null,
+  "Kalachara": [
+    22.7019782,
+    88.2459828
+  ],
+  "Kalagachia": null,
+  "Kalaikunda": null,
+  "Kalatalahat": null,
+  "Kaleshwar": null,
+  "Kaliachak": null,
+  "Kalibabu Bazar": null,
+  "Kalibele": null,
+  "Kalidaha": null,
+  "Kalidanga": null,
+  "Kalighat": [
+    22.518,
+    88.343
+  ],
+  "Kalikapur": [
+    22.5053017,
+    88.4009957
+  ],
+  "Kalindi": [
+    22.6094315,
+    88.4005465
+  ],
+  "Kalipahari": null,
+  "Kalipark": null,
+  "Kalipur": [
+    22.6837381,
+    88.2769898
+  ],
+  "Kalipur Bazar": null,
+  "Kalitala": [
+    22.5063399,
+    88.3985445
+  ],
+  "Kalitala Housing": null,
+  "Kalna": null,
+  "Kalpathor": null,
+  "Kaltala": null,
+  "Kalui": null,
+  "Kalupur": null,
+  "Kalur": null,
+  "Kalyan Nagar": [
+    22.718534,
+    88.3892209
+  ],
+  "Kalyangarh": null,
+  "Kalyani": [
+    22.9749723,
+    88.4345915
+  ],
+  "Kalyani Aiims": [
+    22.9744803,
+    88.5300703
+  ],
+  "Kalyani Ishwsar Gupta Setu": null,
+  "Kalyanpur": [
+    22.343456,
+    88.414597
+  ],
+  "Kalyanpur Panchayat": null,
+  "Kalyanshree": null,
+  "Kamal Talkies": null,
+  "Kamalgazi": [
+    22.4495236,
+    88.3955392
+  ],
+  "Kamalpur": null,
+  "Kamardanga": null,
+  "Kamarhati": [
+    22.672,
+    88.376
+  ],
+  "Kamarpara": null,
+  "Kamarpukur": null,
+  "Kamdebpur": null,
+  "Kamina": null,
+  "Kampa": [
+    22.9274119,
+    88.4669853
+  ],
+  "Kanchantala": null,
+  "Kanchiara": null,
+  "Kanchkol": null,
+  "Kanchrapara": [
+    22.9496431,
+    88.4378838
+  ],
+  "Kandi": null,
+  "Kandra": null,
+  "Kankardanga": null,
+  "Kankinara": [
+    22.8667532,
+    88.405593
+  ],
+  "Kanko": null,
+  "Kankordanga": null,
+  "Kankurgachi": [
+    22.58,
+    88.396
+  ],
+  "Kanmari": null,
+  "Kanmari Bazar": null,
+  "Kanraria": null,
+  "Kantakhali": null,
+  "Kantamari": null,
+  "Kantatala": null,
+  "Kanthal Beria": [
+    22.3041634,
+    88.4211134
+  ],
+  "Kanthalberia": null,
+  "Kanthalia": null,
+  "Kanthalibar": null,
+  "Kanthi": null,
+  "Kapasaria": null,
+  "Kapastikri": null,
+  "Kapathat": null,
+  "Kapileshwar": null,
+  "Karanjali": null,
+  "Karatberia": null,
+  "Karbala": [
+    22.5414673,
+    88.2669179
+  ],
+  "Karigari Bhawan": [
+    22.5592246,
+    88.491555
+  ],
+  "Karimpur": [
+    22.509607,
+    88.4166693
+  ],
+  "Karkaria": null,
+  "Karolberia": null,
+  "Kartickpur": null,
+  "Karunamoyee": [
+    22.578,
+    88.417
+  ],
+  "Kasba": [
+    22.516,
+    88.387
+  ],
+  "Kasba Narayangarh": null,
+  "Kasba PS": null,
+  "Kasba Post Office": null,
+  "Kasba Rathtala": null,
+  "Kashemnagar": null,
+  "Kashinagar": null,
+  "Kashipur": [
+    22.6259247,
+    88.3723226
+  ],
+  "Kathalia": [
+    22.5289572,
+    88.6067853
+  ],
+  "Kathgola": [
+    22.5767147,
+    88.3899863
+  ],
+  "Katiahat Bazar": null,
+  "Katin": null,
+  "Katlamari": null,
+  "Katlia": [
+    22.6161662,
+    88.2538417
+  ],
+  "Katwa": null,
+  "Katwa Bus Stand": null,
+  "Katwa Station": null,
+  "Kaukepara": null,
+  "Kavi Nazrul": [
+    22.4643097,
+    88.3811204
+  ],
+  "Kavi Subhash": [
+    22.4720556,
+    88.3979434
+  ],
+  "Kavi Sukanta": [
+    22.5053017,
+    88.4009957
+  ],
+  "Kayosa Bazar": null,
+  "Kayrapur": [
+    22.791989,
+    88.3923529
+  ],
+  "Kazi Nazrul Islam Airport": null,
+  "Kazipara": [
+    22.7226496,
+    88.5083659
+  ],
+  "Kazipara Depot": null,
+  "Kemia": null,
+  "Kendua Bazar": null,
+  "Keorapukur": null,
+  "Keota": null,
+  "Keranibandh Bypass": null,
+  "Keshabchak Gram Panchayat": null,
+  "Keshapat": null,
+  "Keshiary": null,
+  "Keshpur": null,
+  "Kestopur": [
+    22.601,
+    88.428
+  ],
+  "Kestopur Bazar": null,
+  "Kestor": null,
+  "Ketopool": null,
+  "Ketugram": null,
+  "Keutia": null,
+  "Khadina": null,
+  "Khadinan": null,
+  "Khagraghat": null,
+  "Khajuraberi": null,
+  "Khalisani": [
+    22.8661824,
+    88.3457559
+  ],
+  "Khalna Bazar": null,
+  "Khalore": null,
+  "Khandaghosh": null,
+  "Khandalia": null,
+  "Khandra": null,
+  "Khanna Cinema": [
+    22.595,
+    88.383
+  ],
+  "Khanpur": [
+    22.3046919,
+    88.4386916
+  ],
+  "Kharagpur": [
+    22.5737218,
+    88.4176526
+  ],
+  "Kharagpur Bypass": null,
+  "Kharagpur Chowrangee": null,
+  "Kharagpur Chowringhee": null,
+  "Kharagpur Station": null,
+  "Kharagpurchowrangee": null,
+  "Kharampur": null,
+  "Kharbona": null,
+  "Khardaha": [
+    22.7156992,
+    88.381582
+  ],
+  "Khargram": null,
+  "Kharibari": [
+    22.6462976,
+    88.5520416
+  ],
+  "Khariberia": null,
+  "Khariduar": null,
+  "Kharika": null,
+  "Kharikamathani": null,
+  "Kharuberia": null,
+  "Khasmallick": null,
+  "Khasnan": null,
+  "Khaspur": null,
+  "Khatra": null,
+  "Khatul": null,
+  "Khatura Bazar": null,
+  "Khejurdaha": null,
+  "Khejuri": null,
+  "Khejuria": null,
+  "Khejurtala": [
+    22.703076,
+    88.4825615
+  ],
+  "Khemashuli": null,
+  "Khila": null,
+  "Khilkapur": null,
+  "Khirishtala": [
+    22.4387069,
+    88.4265831
+  ],
+  "Khirpai": null,
+  "Khodambari": null,
+  "Kholakhali Hat": null,
+  "Kholapota": [
+    22.3862052,
+    88.451721
+  ],
+  "Khorop": null,
+  "Khosdelpur": null,
+  "Khotirbazar": null,
+  "Khudiram Park": [
+    22.9624022,
+    88.4581339
+  ],
+  "Khudrun": null,
+  "Khujutipara": null,
+  "Khukurdaha": null,
+  "Khulna": [
+    22.5564825,
+    88.3559102
+  ],
+  "Kiamacha": null,
+  "Kidderpore": [
+    22.538,
+    88.332
+  ],
+  "Kirnahar": null,
+  "Kishanganj": null,
+  "Kishorepur": null,
+  "Kishorimohonpur": null,
+  "Kochujor": null,
+  "Koichor": null,
+  "Kokapur": null,
+  "Kolaboni": null,
+  "Kolaghat": null,
+  "Kolaipara": null,
+  "Kolashim Bazar": null,
+  "Koldanga": null,
+  "Kolkata Station": [
+    22.6012775,
+    88.3841474
+  ],
+  "Komarpur": null,
+  "Kona": [
+    22.6184662,
+    88.2968751
+  ],
+  "Kona Expressway": [
+    22.5853479,
+    88.2848811
+  ],
+  "Konchowki": null,
+  "Konnagar": [
+    22.69972,
+    88.3519784
+  ],
+  "Koralitala": null,
+  "Korapara": null,
+  "Korui": null,
+  "Kotshila": null,
+  "Kotulpur": null,
+  "Kowgachi": null,
+  "Koyaldanga": null,
+  "Koyrapur": null,
+  "Kriparampur": null,
+  "Krishnabati": null,
+  "Krishnachandrapur": null,
+  "Krishnaganj": null,
+  "Krishnamati": null,
+  "Krishnanagar": [
+    22.4574569,
+    88.3362173
+  ],
+  "Krishnanagar High Road": null,
+  "Krishnarampur": [
+    22.4675147,
+    88.2654729
+  ],
+  "Kshirishtala": null,
+  "Kudghat": [
+    22.4813707,
+    88.3458155
+  ],
+  "Kuilapal": null,
+  "Kulari": null,
+  "Kuldiha": null,
+  "Kulepairi": null,
+  "Kulgachia": [
+    22.472091,
+    88.0205997
+  ],
+  "Kuli": null,
+  "Kuliagarh": null,
+  "Kuliapara": null,
+  "Kulpi": [
+    22.2576479,
+    88.4453135
+  ],
+  "Kulpukur": null,
+  "Kultali": null,
+  "Kultali Bazar": null,
+  "Kulti": null,
+  "Kumartuli": null,
+  "Kumidya": null,
+  "Kumirmari Bazar": null,
+  "Kumirmora": null,
+  "Kundubari": null,
+  "Kuntighat": [
+    23.0171023,
+    88.4135873
+  ],
+  "Kurmun": null,
+  "Kushangra": null,
+  "Kushodanaga": null,
+  "Kusthal": null,
+  "Kustia": [
+    22.5290324,
+    88.3791725
+  ],
+  "Kustikuri": null,
+  "Kusumgram": null,
+  "Kutni": null,
+  "Kuturia": null,
+  "Labhpur": null,
+  "Labony Estate": null,
+  "Ladhurka": null,
+  "Laghata": null,
+  "Lake Gardens": [
+    22.5053,
+    88.3548
+  ],
+  "Lake Mall": [
+    22.5165014,
+    88.3488514
+  ],
+  "Laketown": [
+    22.6021807,
+    88.4050076
+  ],
+  "Laketown Jessore Road": null,
+  "Lakshmi": [
+    22.5353788,
+    88.3518905
+  ],
+  "Lakshmikantapur Station": null,
+  "Lakshminarayanpur": null,
+  "Lakshmisagar": null,
+  "Lalbaba College": [
+    22.6364868,
+    88.3517694
+  ],
+  "Lalbazar": [
+    22.5723614,
+    88.3521265
+  ],
+  "Lalgarh": null,
+  "Lalgola": null,
+  "Lalpur": null,
+  "Langolpota": null,
+  "Lansdowne": [
+    22.5151344,
+    88.3527357
+  ],
+  "Lauhati": null,
+  "Laxmanpur": null,
+  "Layalka": [
+    22.4855358,
+    88.3696118
+  ],
+  "Layekbazar": null,
+  "Leather Complex": [
+    22.4971074,
+    88.5158999
+  ],
+  "Lebukhali": null,
+  "Leninnagar": null,
+  "Light House": null,
+  "Liluah": [
+    22.6209027,
+    88.3394035
+  ],
+  "Liluah Station": [
+    22.6209027,
+    88.3394035
+  ],
+  "Lodhashuli": null,
+  "Lokenath Mandir": [
+    22.5637048,
+    88.2962304
+  ],
+  "M R Bangur Hospital": [
+    22.4973707,
+    88.3457052
+  ],
+  "MG Road": [
+    22.582,
+    88.357
+  ],
+  "Machantala": null,
+  "Machhlandapur": null,
+  "Madanmohantala": null,
+  "Madartala": null,
+  "Madhabpur": [
+    22.4671485,
+    88.5432056
+  ],
+  "Madhakhali": null,
+  "Madhuban": [
+    22.4823773,
+    88.353303
+  ],
+  "Madhupur": null,
+  "Madhusankati": null,
+  "Madhyamgram": [
+    22.697,
+    88.45
+  ],
+  "Magra": [
+    22.9838676,
+    88.3683372
+  ],
+  "Magra Bazar": null,
+  "Magurkhali": [
+    22.4360284,
+    88.3416353
+  ],
+  "Mahabirtala": null,
+  "Mahajati Sadan": [
+    22.5811689,
+    88.3618766
+  ],
+  "Mahakaran": [
+    22.5714881,
+    88.3504234
+  ],
+  "Mahalandi": null,
+  "Mahamayatala": null,
+  "Mahanad": [
+    22.9952017,
+    88.2620037
+  ],
+  "Mahananda Forest": null,
+  "Mahanayak Uttam Kumar": [
+    22.4947692,
+    88.3450879
+  ],
+  "Mahesh Bazar": null,
+  "Maheshwarpur": null,
+  "Mahishadal": null,
+  "Mahishbathan": null,
+  "Mahishgari": null,
+  "Mahishrekha": null,
+  "Mahjerhat": null,
+  "Maidan": [
+    22.553,
+    88.346
+  ],
+  "Mainaguri Bypass": null,
+  "Maipith": null,
+  "Maipith Bazar": null,
+  "Maipith Coastal": null,
+  "Maitapukur Bus Stand": null,
+  "Maiti Para": null,
+  "Majhergram": null,
+  "Majherhat": [
+    22.523,
+    88.321
+  ],
+  "Majlishpur": null,
+  "Makalpur Bazar": null,
+  "Makardaha": [
+    22.6286882,
+    88.2366824
+  ],
+  "Makrampur": [
+    22.4190756,
+    88.520234
+  ],
+  "Makurgram": null,
+  "Malamba": null,
+  "Malancha": [
+    22.4882966,
+    88.5847553
+  ],
+  "Malancha Cinema": null,
+  "Malangapara": null,
+  "Malapara": null,
+  "Malatipur": null,
+  "Malbazar": null,
+  "Malda": null,
+  "Maldanga": null,
+  "Maliara": null,
+  "Malipanchghara": null,
+  "Malipota": null,
+  "Mallarpur": null,
+  "Mallick Bazar": [
+    22.5467962,
+    88.3613998
+  ],
+  "Mallick Fatak": null,
+  "Mallickbari": null,
+  "Mallickpur": null,
+  "Mamudpur": [
+    22.3307356,
+    88.416515
+  ],
+  "Manasabari Bazar": null,
+  "Manbazar": null,
+  "Mandabtala": null,
+  "Mandalerhat": null,
+  "Mandalkupi": null,
+  "Mandarmani": null,
+  "Mandirbazar": null,
+  "Mandirtala": [
+    22.5696052,
+    88.3170772
+  ],
+  "Mani Square": [
+    22.577767,
+    88.400552
+  ],
+  "Manihara": [
+    22.5988094,
+    88.3771673
+  ],
+  "Manik Khola": null,
+  "Manikpir": null,
+  "Manikpur": [
+    22.4711658,
+    88.0268302
+  ],
+  "Maniktala": [
+    22.586,
+    88.387
+  ],
+  "Manjushree": [
+    22.4591422,
+    88.4194829
+  ],
+  "Mankar": null,
+  "Mankur": null,
+  "Manteshwar": null,
+  "Manteswar": null,
+  "Manton": [
+    22.4948629,
+    88.3166069
+  ],
+  "Marine College": null,
+  "Marut": null,
+  "Masagram": null,
+  "Mashat Market": null,
+  "Masjidbati": null,
+  "Masterda Surya Sen": [
+    22.4735865,
+    88.3606732
+  ],
+  "Matapara": null,
+  "Matgaran": null,
+  "Math Chandipur": null,
+  "Mathbari": null,
+  "Mathkal": [
+    22.651989,
+    88.4022307
+  ],
+  "Mathpukur": [
+    22.5486688,
+    88.4005204
+  ],
+  "Mathrangi": null,
+  "Mathrun": null,
+  "Mathurabagan": null,
+  "Mathurapur Station": null,
+  "Matia Bridge": null,
+  "Matiganj": null,
+  "Matikumra": null,
+  "Matla Bridge": null,
+  "Mayapur": null,
+  "Mayapur Hulor Ghat Bus Stand": null,
+  "Mayapur Iskcon Temple": null,
+  "Mayo Road": [
+    22.5617644,
+    88.3478405
+  ],
+  "Mayramahal": null,
+  "Mayukh Bhawan": null,
+  "Mazompur": null,
+  "Md Bazar": [
+    22.5785708,
+    88.3533902
+  ],
+  "Mearbere": null,
+  "Mecheda": null,
+  "Mecheda Station": null,
+  "Mechogram": null,
+  "Mechua Bazar": null,
+  "Medica Hospital": [
+    22.4941014,
+    88.4009961
+  ],
+  "Medical College": [
+    22.5722242,
+    88.3614363
+  ],
+  "Medinipur": null,
+  "Meherani": null,
+  "Memari": null,
+  "Metekhali": null,
+  "Metiabruz": [
+    22.54357,
+    88.2679343
+  ],
+  "Metiabruz Ssp Hospital": null,
+  "Metropolitan": [
+    22.5726459,
+    88.3638953
+  ],
+  "Michaelnagar": [
+    22.6746769,
+    88.4445209
+  ],
+  "Midnapore": null,
+  "Midnapore Town": null,
+  "Milan": [
+    22.4722102,
+    88.3718116
+  ],
+  "Milk Colony": [
+    22.5709658,
+    88.412696
+  ],
+  "Minakhan": null,
+  "Minto Park": [
+    22.5419474,
+    88.3547135
+  ],
+  "Mirhati": null,
+  "Mirjapur": null,
+  "Mission Pally": [
+    22.4397289,
+    88.4180472
+  ],
+  "Mithpukuria": null,
+  "Mittirchak": null,
+  "Ml Gupta Road": null,
+  "Modina": null,
+  "Mogolmari": null,
+  "Mogra": [
+    22.9882573,
+    88.373269
+  ],
+  "Mohammad Bazar": [
+    22.5772396,
+    88.3607374
+  ],
+  "Mohanbati": null,
+  "Mohani": null,
+  "Mohanpur": [
+    22.9636334,
+    88.5258759
+  ],
+  "Mohar": null,
+  "Mohirampur": null,
+  "Mohishpota": null,
+  "Mollar Gate": null,
+  "Mollarchak": null,
+  "Mollarthesh": null,
+  "Mominpore": [
+    22.531,
+    88.327
+  ],
+  "Mondolai": null,
+  "Mondonkathi": null,
+  "Mondonpara": null,
+  "Mondourie": null,
+  "Monteswar": null,
+  "Moonbeam": [
+    22.6280188,
+    88.4670512
+  ],
+  "Morebandh": null,
+  "Moregram": null,
+  "Morgram": null,
+  "Mosat": null,
+  "Motgoda": null,
+  "Motigunge": null,
+  "Moulali": [
+    22.561,
+    88.368
+  ],
+  "Mourigram": [
+    22.5802652,
+    88.2560296
+  ],
+  "Moyna Checkpost": null,
+  "Moynagarh": null,
+  "Moynaguri": null,
+  "Muchighata": null,
+  "Muchipara": [
+    22.566664,
+    88.3653411
+  ],
+  "Mudiali": [
+    22.5100748,
+    88.3466256
+  ],
+  "Mugbasan": null,
+  "Mugkalyan": null,
+  "Mukundapur": [
+    22.498,
+    88.399
+  ],
+  "Mukundapur Bazar": null,
+  "Mukutmanipur": null,
+  "Muluk": null,
+  "Munshirhat": null,
+  "Muragacha": null,
+  "Murarai": null,
+  "Murarisha Chowmatha": null,
+  "Muratipur": null,
+  "Muri": [
+    22.6503041,
+    88.3939899
+  ],
+  "Muthurapur": null,
+  "NSHM Campus": [
+    22.4964795,
+    88.3387967
+  ],
+  "Nabadwip": null,
+  "Nabadwip Bus Stand": null,
+  "Nabadwip Railgate": null,
+  "Nabagram": [
+    22.2897173,
+    88.5173747
+  ],
+  "Nabanna": [
+    22.5675682,
+    88.3136826
+  ],
+  "Nabastha": null,
+  "Nabatkati": null,
+  "Nabgram": null,
+  "Nachinda": null,
+  "Nadanghat": null,
+  "Nafargange": null,
+  "Nagalbeki": null,
+  "Nagar": [
+    22.497554,
+    88.3748206
+  ],
+  "Nagar Kachua": null,
+  "Nagardanga": null,
+  "Nagarukhra": [
+    22.9435655,
+    88.6380579
+  ],
+  "Nager Bazar": [
+    22.63,
+    88.42
+  ],
+  "Nahata": null,
+  "Naihati Station": [
+    22.8870061,
+    88.4176531
+  ],
+  "Nainan": null,
+  "Naisharai": null,
+  "Najirpur": null,
+  "Nakaijuri": null,
+  "Nakpul Bazar": null,
+  "Naktala": [
+    22.476,
+    88.376
+  ],
+  "Nalhati": null,
+  "Nalmuri": [
+    22.4910179,
+    88.5974597
+  ],
+  "Namkhana": [
+    22.5635657,
+    88.3496743
+  ],
+  "Namkhana Station": null,
+  "Nandakumar": null,
+  "Nandi Bagan": null,
+  "Nandibari": null,
+  "Nandigram": null,
+  "Nanur": null,
+  "Narasinghapur": [
+    22.7525277,
+    88.5419969
+  ],
+  "Narayana Hospital": [
+    22.5677228,
+    88.270405
+  ],
+  "Narayanpur": [
+    22.4843866,
+    88.5657246
+  ],
+  "Narayantala": [
+    22.4711059,
+    88.5281189
+  ],
+  "Narendrapur": [
+    22.4539009,
+    88.4184898
+  ],
+  "Narghat": null,
+  "Narikelabar": null,
+  "Narit": null,
+  "Narkelbagan": null,
+  "Narkelberia": null,
+  "Narsona": null,
+  "Naskarpara": [
+    22.4731752,
+    88.3601356
+  ],
+  "Nataberia": null,
+  "Natagachi": null,
+  "Natagarh": [
+    23.1536323,
+    88.419904
+  ],
+  "Natuhat": null,
+  "Natun Rasta": null,
+  "Natungram": null,
+  "Natunhat": null,
+  "Natunpukur": null,
+  "Nature Park": [
+    22.9885558,
+    88.4795346
+  ],
+  "Nawabpur": null,
+  "Nayabad": [
+    22.477646,
+    88.4399813
+  ],
+  "Nayabsat": null,
+  "Nayagram": null,
+  "Nazat": null,
+  "Nazirgunge": null,
+  "Neamatpur": null,
+  "Negon": null,
+  "Nelorpar": null,
+  "Nepakuli": null,
+  "Nepalgunge": null,
+  "Neradeul": null,
+  "Netaji": [
+    22.4809928,
+    88.3460002
+  ],
+  "Netaji Bhavan": [
+    22.537476,
+    88.3509847
+  ],
+  "Netaji Nagar": [
+    22.483,
+    88.362
+  ],
+  "New Alipore": [
+    22.504,
+    88.332
+  ],
+  "New Barrackpore": [
+    22.6564623,
+    88.4467245
+  ],
+  "New Digha": null,
+  "New Garia": [
+    22.4726577,
+    88.3977506
+  ],
+  "Newtown": [
+    22.581,
+    88.464
+  ],
+  "Neyamatpur": null,
+  "Nibhuji": null,
+  "Nibra": null,
+  "Nicco Park": [
+    22.5709325,
+    88.4221817
+  ],
+  "Nigan": null,
+  "Nilgunge": null,
+  "Nima Terasta": null,
+  "Nimchi Bazar": null,
+  "Nimdighi": null,
+  "Nimpith": null,
+  "Nimta Bazar": [
+    22.6536604,
+    88.3973546
+  ],
+  "Nimtala": [
+    22.5918675,
+    88.3582608
+  ],
+  "Nimtauri": null,
+  "Nimtouri": null,
+  "Nirdeshkhali": null,
+  "Nirman": [
+    22.6000234,
+    88.3938845
+  ],
+  "Nirol": null,
+  "Nischintapur": [
+    22.4390267,
+    88.4169323
+  ],
+  "Nischintipur": null,
+  "Nituria": null,
+  "Nivedita Setu": [
+    22.6525307,
+    88.3541554
+  ],
+  "Noapara": [
+    22.6398418,
+    88.3941343
+  ],
+  "Nodakhali": null,
+  "Nokari": null,
+  "Nonapukur": [
+    22.5504286,
+    88.3628561
+  ],
+  "Noongola": null,
+  "Noorpur": null,
+  "Norghat": null,
+  "Norja": null,
+  "Notun Bazar": [
+    22.7246162,
+    88.3743079
+  ],
+  "Notun Rasta": null,
+  "Noul Bazar": null,
+  "Nrs Hospital": [
+    22.5649105,
+    88.3683728
+  ],
+  "Ntutanhat": null,
+  "Nungi": null,
+  "Nuntia": null,
+  "Nurpur": null,
+  "Nutangram": null,
+  "Nutanhat": null,
+  "ONGC": [
+    22.5854196,
+    88.4750334
+  ],
+  "Old Dakghar": null,
+  "Old Digha": null,
+  "Omarpur": null,
+  "Onda": null,
+  "Oodlabari": null,
+  "Orgram": null,
+  "P": [
+    22.5726459,
+    88.3638953
+  ],
+  "PTS": null,
+  "Pabnapara": null,
+  "Pachudi": null,
+  "Pachundi": null,
+  "Padmalavpur": null,
+  "Padmapukur": [
+    22.5315429,
+    88.3524574
+  ],
+  "Padmerhat": [
+    22.2448654,
+    88.4473864
+  ],
+  "Paglarhat": null,
+  "Paharhati": null,
+  "Paikan": [
+    22.528553,
+    88.5374163
+  ],
+  "Paikpara": [
+    22.6120515,
+    88.3855648
+  ],
+  "Pailan": null,
+  "Pakdaha": null,
+  "Pakhanna": null,
+  "Palashi": [
+    22.928192,
+    88.4860182
+  ],
+  "Palashipara": null,
+  "Palbazar": null,
+  "Palishgram": null,
+  "Palitpur": null,
+  "Pallagram": null,
+  "Palmer Bazar": [
+    22.5627886,
+    88.378068
+  ],
+  "Palpara": [
+    23.0604693,
+    88.5212976
+  ],
+  "Palsanda": null,
+  "Palta": [
+    22.7826288,
+    88.3702748
+  ],
+  "Palta Bazar": null,
+  "Paltadanga": null,
+  "Panagarh": null,
+  "Panagarh Bazar": null,
+  "Panagarh Bypass": null,
+  "Panagarh Darjeeling": null,
+  "Panchanantala": [
+    22.503565,
+    88.3168474
+  ],
+  "Pancharul": null,
+  "Panchboga Flyover": null,
+  "Panchgram": null,
+  "Panchkari": null,
+  "Panchla": [
+    22.5412966,
+    88.1473016
+  ],
+  "Panchmura": null,
+  "Panchpota": [
+    22.4681162,
+    88.4196482
+  ],
+  "Panditpur": null,
+  "Pandua": [
+    22.9709217,
+    88.2849016
+  ],
+  "Pandugram": null,
+  "Panduk": null,
+  "Panikhali": null,
+  "Paniparul": null,
+  "Panpur": null,
+  "Panrui": null,
+  "Panshkura": null,
+  "Panskura": null,
+  "Panskura Bazar": null,
+  "Panskura Bypass": null,
+  "Pantihal": [
+    22.6588954,
+    88.1134609
+  ],
+  "Panuda": null,
+  "Par Hasnabad": null,
+  "Parbelia": null,
+  "Pardankuni": null,
+  "Park Circus": [
+    22.539,
+    88.367
+  ],
+  "Park Street": [
+    22.553,
+    88.352
+  ],
+  "Parnasree": [
+    22.510188,
+    88.3061747
+  ],
+  "Parthapur": null,
+  "Parulia": [
+    22.8994141,
+    88.6216282
+  ],
+  "Parulia Bazar": null,
+  "Paschim Tajpur": [
+    22.7570642,
+    88.1881087
+  ],
+  "Patamda": null,
+  "Pateswari Mandir": null,
+  "Patghara": null,
+  "Patharberia": null,
+  "Patharghata": [
+    22.5684582,
+    88.5018975
+  ],
+  "Patharpratima": null,
+  "Patinan": null,
+  "Patipukur": [
+    22.615,
+    88.396
+  ],
+  "Patkelpota": null,
+  "Patrasayer": null,
+  "Patshimulia": null,
+  "Patuli": [
+    22.472,
+    88.394
+  ],
+  "Payrachali": null,
+  "Payragacha": null,
+  "Payragachi": null,
+  "Peerless Hospital": [
+    22.4809641,
+    88.3938205
+  ],
+  "Peror": null,
+  "Petkulchand Bazar": null,
+  "Philips": [
+    22.5530633,
+    88.3533656
+  ],
+  "Phoolbagan": [
+    22.576,
+    88.392
+  ],
+  "Phooltala": null,
+  "Phulia": null,
+  "Piariganj": null,
+  "Pichaboni": null,
+  "Picnic Garden": [
+    22.9827423,
+    88.4234023
+  ],
+  "Pifa Bazar": null,
+  "Pilkhana": null,
+  "Pingbani": null,
+  "Pirakata": null,
+  "Pirnagar": null,
+  "Pirtala": null,
+  "Pitambara": null,
+  "Piyasara": null,
+  "Plassey": null,
+  "Poabagan": null,
+  "Poddar Court": null,
+  "Podder Court": null,
+  "Podra Bazar": null,
+  "Polerhat": null,
+  "Police Line": [
+    22.5639617,
+    88.3224609
+  ],
+  "Poradi": null,
+  "Poradih": null,
+  "Posta Bazar": null,
+  "Power House": [
+    22.9799872,
+    88.4479758
+  ],
+  "Prasadpur": null,
+  "Praxis Business School": null,
+  "Princep Ghat": [
+    22.5566724,
+    88.3311979
+  ],
+  "Priyor": null,
+  "Puabagan": null,
+  "Puinan": null,
+  "Pujali": [
+    22.4601371,
+    88.1340191
+  ],
+  "Pukuria Hat": null,
+  "Puncha": null,
+  "Pundibari": null,
+  "Punjabi": [
+    22.5498352,
+    88.3499431
+  ],
+  "Purandapur": null,
+  "Purandarpur": [
+    22.3679348,
+    88.4205176
+  ],
+  "Purandarur": null,
+  "Purapara": null,
+  "Purash": null,
+  "Puratan Bazar": null,
+  "Puratan Bongaon": null,
+  "Purbasthali": null,
+  "Purta Bhawan": null,
+  "Purulia": null,
+  "Quality": null,
+  "Quest Mall": [
+    22.5390275,
+    88.3656558
+  ],
+  "R S Software": null,
+  "RG Kar": [
+    22.606,
+    88.377
+  ],
+  "RN Chowdhury Road": null,
+  "Rabindra Nagar": [
+    22.5098737,
+    88.3592364
+  ],
+  "Rabindra Sadan": [
+    22.544,
+    88.347
+  ],
+  "Rabindra Sarani": [
+    22.576745,
+    88.3553001
+  ],
+  "Rabindra Sarovar": null,
+  "Radha Chemical": null,
+  "Radhadashi": null,
+  "Radhamani": null,
+  "Radhamoni": null,
+  "Radhanagar": [
+    22.4487719,
+    88.4718734
+  ],
+  "Radhapur": null,
+  "Rafipur": null,
+  "Raghabkati": null,
+  "Raghunathganj": null,
+  "Raghunathgunj": null,
+  "Raghunathpur": [
+    22.4093984,
+    88.37909
+  ],
+  "Rahana Bazar": null,
+  "Rahara Bazar": [
+    22.7239265,
+    88.3867904
+  ],
+  "Rahatpur": null,
+  "Rahimpur": null,
+  "Raichak": null,
+  "Raidighi": [
+    22.484609,
+    88.2959036
+  ],
+  "Raiganj": null,
+  "Raigram": null,
+  "Raipur": [
+    22.4857017,
+    88.3650866
+  ],
+  "Raja Rammohan Roy Road": [
+    22.4881118,
+    88.3241825
+  ],
+  "Rajabagan": null,
+  "Rajabazar": [
+    22.579,
+    88.376
+  ],
+  "Rajabazar Tram Depot": [
+    22.574169,
+    88.3738136
+  ],
+  "Rajapur": [
+    22.4236504,
+    88.5818801
+  ],
+  "Rajarhat": [
+    22.6286173,
+    88.44061
+  ],
+  "Rajarhat Chowmatha": [
+    22.6266867,
+    88.4889817
+  ],
+  "Rajbalhat": null,
+  "Rajballavpara": null,
+  "Rajbari": [
+    22.5968262,
+    88.3671932
+  ],
+  "Rajberia": null,
+  "Rajchandrapur": [
+    22.6529137,
+    88.3213135
+  ],
+  "Rajgunge": null,
+  "Rajibpur": [
+    22.7952233,
+    88.5441009
+  ],
+  "Rajpur": [
+    22.4229879,
+    88.4112027
+  ],
+  "Rajpur Bazar": [
+    22.4227897,
+    88.4107273
+  ],
+  "Ram Mandir": [
+    22.6084797,
+    88.4565648
+  ],
+  "Rambati": null,
+  "Ramchandrapur": [
+    22.4607788,
+    88.3300029
+  ],
+  "Ramchandrapur Bazar": [
+    22.4383645,
+    88.3926066
+  ],
+  "Ramdhari": [
+    22.3394656,
+    88.567121
+  ],
+  "Rameshwar": [
+    22.5477041,
+    88.285498
+  ],
+  "Ramganga": null,
+  "Ramganga Bdo Office": null,
+  "Ramgarh": [
+    22.483,
+    88.376
+  ],
+  "Ramhatitala": null,
+  "Ramjibanpur": [
+    22.4441793,
+    88.34129
+  ],
+  "Ramkrishna Talkies": null,
+  "Ramlal Bazar": [
+    22.5075346,
+    88.3851511
+  ],
+  "Ramnagar": [
+    22.3231769,
+    88.486999
+  ],
+  "Ramnarayanpur": null,
+  "Rampur": [
+    22.4212718,
+    88.4630573
+  ],
+  "Rampur Quarter": null,
+  "Rampurhat": null,
+  "Ramrajatala": [
+    22.5886606,
+    88.2966655
+  ],
+  "Ramsagar": null,
+  "Ranaghat": null,
+  "Ranchi": null,
+  "Rangapur": null,
+  "Ranibandh": null,
+  "Ranichak": null,
+  "Raniganj": null,
+  "Raniganj Punjabi": null,
+  "Ranihati": [
+    22.5582414,
+    88.0867092
+  ],
+  "Ranikuthi": null,
+  "Rasapunja": [
+    22.4380591,
+    88.267537
+  ],
+  "Rashbehari": [
+    22.514,
+    88.353
+  ],
+  "Rashidpur": null,
+  "Rashmoni": [
+    22.5638235,
+    88.3500063
+  ],
+  "Raspunja": null,
+  "Rasulpur": null,
+  "Rathtala": [
+    22.5135613,
+    88.3812157
+  ],
+  "Ratneshwarpur": null,
+  "Ratulia": null,
+  "Rayna": null,
+  "Reckjuani": null,
+  "Rejinagar": null,
+  "Reyapara": null,
+  "Ripon Street": [
+    22.5503588,
+    88.3598938
+  ],
+  "Rishra": [
+    22.7247059,
+    88.3434353
+  ],
+  "Ritwik Ghatak": [
+    22.5329913,
+    88.396456
+  ],
+  "Roy Bahadur Road": null,
+  "Ruby": [
+    22.513,
+    88.401
+  ],
+  "Rudranagar": null,
+  "Rudrapur": [
+    22.6220341,
+    88.184573
+  ],
+  "Ruiya Purbapara": null,
+  "Rupmari Bazar": null,
+  "Rupnarayanpur": null,
+  "SDF": [
+    22.569102,
+    88.4306991
+  ],
+  "SM Nagar": null,
+  "Sabaldaha": null,
+  "Sabang": null,
+  "Sabedabagan": [
+    22.653055,
+    88.3731366
+  ],
+  "Sabrakone": null,
+  "Sadarpur": null,
+  "Saduli": [
+    22.5548978,
+    88.5697773
+  ],
+  "Sagaria": null,
+  "Sagarpara": null,
+  "Sagrai": null,
+  "Sahagunj": null,
+  "Sahararhat": null,
+  "Saheb Colony": null,
+  "Saheed Nagar": null,
+  "Sahidnagar": null,
+  "Saihati": [
+    22.4734417,
+    88.6047143
+  ],
+  "Sainthia": null,
+  "Saiyadpara": null,
+  "Sajirhat": [
+    22.6963353,
+    88.4393489
+  ],
+  "Sajnaberia": [
+    22.4413816,
+    88.3311834
+  ],
+  "Sakher Bazar": [
+    22.486,
+    88.309
+  ],
+  "Salanpur": null,
+  "Salap": null,
+  "Salar": null,
+  "Salbari": null,
+  "Salboni": null,
+  "Saldiha": null,
+  "Salkia Chowrasta": null,
+  "Saltlake": [
+    22.5822352,
+    88.4242073
+  ],
+  "Saltlake 10no Tank": null,
+  "Saltlake 12no Tank": null,
+  "Saltlake 13no Tank": null,
+  "Saltlake 14no Tank": null,
+  "Saltlake 16no Tank": null,
+  "Saltlake 206": [
+    22.5822352,
+    88.4242073
+  ],
+  "Saltlake 4no Tank": null,
+  "Saltlake 7no Tank": null,
+  "Saltlake 9no Tank": null,
+  "Saltlake CA Block": null,
+  "Saltlake Gate": null,
+  "Saltlake PNB": null,
+  "Saltlake Stadium": [
+    22.57,
+    88.405
+  ],
+  "Salua": null,
+  "Salua Bazar": null,
+  "Salugara": null,
+  "Samshernagar": null,
+  "Samsi": null,
+  "Samudragarh": null,
+  "Sangrampur": null,
+  "Sankarpur": [
+    22.3014874,
+    88.432766
+  ],
+  "Sankizahan": null,
+  "Sankrail": [
+    22.5623444,
+    88.2104459
+  ],
+  "Sanksaharpukur": null,
+  "Sansat": null,
+  "Santoshpur": [
+    22.4960484,
+    88.3822296
+  ],
+  "Santoshpur Station": [
+    22.5240566,
+    88.2710655
+  ],
+  "Santragachi": [
+    22.5939709,
+    88.2800968
+  ],
+  "Saptapally": null,
+  "Sapuipara": null,
+  "Sarada Park": null,
+  "Sarapul": null,
+  "Sarasberia": null,
+  "Sarberia": null,
+  "Sardiha": null,
+  "Sarenga": [
+    22.522072,
+    88.2196516
+  ],
+  "Sargaria": null,
+  "Sarisha": null,
+  "Sarisha 246": null,
+  "Sarisha Ashram": null,
+  "Sarishahat": null,
+  "Sarkarpool": null,
+  "Sarsuna": [
+    22.4809986,
+    88.284838
+  ],
+  "Sashtir": null,
+  "Satgachia": null,
+  "Satgechia": null,
+  "Satighat": null,
+  "Satmile": null,
+  "Satyabala": null,
+  "Satyajit Ray": [
+    22.4846775,
+    88.3926447
+  ],
+  "Satyanarayan Park": null,
+  "Science City": [
+    22.54,
+    88.395
+  ],
+  "Sealdah": [
+    22.5675,
+    88.37
+  ],
+  "Sech Bhawan": [
+    22.5750899,
+    88.4337664
+  ],
+  "Sector V": [
+    22.576,
+    88.432
+  ],
+  "Sedighi": null,
+  "Sehagori": null,
+  "Seherabazar": null,
+  "Seherakuri": null,
+  "Sekhdighi": null,
+  "Sendanga Bazar": null,
+  "Senerdanga": null,
+  "Sepaidighi": null,
+  "Serampore": [
+    22.7549951,
+    88.3416672
+  ],
+  "Sevatayan": null,
+  "Sevayatan": [
+    22.4754951,
+    88.3966023
+  ],
+  "Sevoke": null,
+  "Shahid Khudiram": [
+    22.4659847,
+    88.3915408
+  ],
+  "Shaktigarh": [
+    22.4914569,
+    88.3678116
+  ],
+  "Shakuntala Park": [
+    22.4850845,
+    88.2895797
+  ],
+  "Shalimar Station": [
+    22.5551538,
+    88.3153898
+  ],
+  "Shaltora": null,
+  "Shamali": null,
+  "Shamukpota": null,
+  "Shankarpur": null,
+  "Shankchura Bazar": null,
+  "Shanpur": null,
+  "Shantipur": null,
+  "Shantipur Bypass": null,
+  "Shantipur Dakghar Bus Stand": null,
+  "Shaoraberia": null,
+  "Shapoorji": [
+    22.553386,
+    88.5110774
+  ],
+  "Shasan": [
+    22.3471565,
+    88.4349016
+  ],
+  "Shasan Bazar": null,
+  "Shasati": null,
+  "Sheakhala": [
+    22.7665462,
+    88.1708436
+  ],
+  "Sheikhdighi": null,
+  "Shekampur": null,
+  "Sherpur": [
+    23.0201758,
+    88.4124076
+  ],
+  "Shibanipith": null,
+  "Shibda": null,
+  "Shiberhana": null,
+  "Shibganj Bazar": null,
+  "Shibgunge": null,
+  "Shibogram Dhalaichandi": null,
+  "Shibpur Bazar": [
+    22.5657574,
+    88.3232203
+  ],
+  "Shibpur Junction": null,
+  "Shibpur Td": null,
+  "Shibrampur": [
+    22.482881,
+    88.27196
+  ],
+  "Shibtala Math": [
+    22.5450611,
+    88.3780496
+  ],
+  "Shikarpur": null,
+  "Shikharpur": null,
+  "Shikra": null,
+  "Shilberia": null,
+  "Shilpara": null,
+  "Shimulberia": null,
+  "Shimulia Ghat": null,
+  "Shimuliyahat": null,
+  "Shimulpur": null,
+  "Shimultala": [
+    22.4442753,
+    88.4098286
+  ],
+  "Shipping Corporation": null,
+  "Shirakole": null,
+  "Shirishtala": null,
+  "Shonepur": null,
+  "Shrikhanda": null,
+  "Shrikole": null,
+  "Shrikrishnapur": null,
+  "Shrinagar": null,
+  "Shrirampur": [
+    22.7549951,
+    88.3416672
+  ],
+  "Shunukpahari": null,
+  "Shyamasree": null,
+  "Shyambazar": [
+    22.599,
+    88.374
+  ],
+  "Shyamchak": null,
+  "Shyamnagar": [
+    22.8285164,
+    88.3801893
+  ],
+  "Shyampur": null,
+  "Shyamsundar": null,
+  "Sian Hospital": null,
+  "Sibanagar": null,
+  "Sidda": null,
+  "Siddha": [
+    22.6245771,
+    88.3776571
+  ],
+  "Siddhiberia": null,
+  "Silda": null,
+  "Sili": null,
+  "Siliguri": null,
+  "Simlapal": null,
+  "Sindrani": null,
+  "Singa": null,
+  "Singarkone": null,
+  "Singhajuli": null,
+  "Singi": null,
+  "Sinthi": [
+    22.623,
+    88.387
+  ],
+  "Sipaigachi": null,
+  "Sirishtala": null,
+  "Siriti": null,
+  "Sishu Mangal": null,
+  "Sitalia": null,
+  "Sitalpur": null,
+  "Sitapur": null,
+  "Situri": [
+    22.4468352,
+    88.5901039
+  ],
+  "Sobedatala": null,
+  "Sodepur": [
+    22.7,
+    88.387
+  ],
+  "Sodepur Girja": null,
+  "Sodepur Station": null,
+  "Sohai Bazar": null,
+  "Somragarh": null,
+  "Sonakhali": null,
+  "Sonakhali Bus Stand": null,
+  "Sonamui": null,
+  "Sonamukhi": [
+    22.4683572,
+    88.2700247
+  ],
+  "Sonarpur": [
+    22.4408748,
+    88.4246368
+  ],
+  "Sonarpur Station": [
+    22.443192,
+    88.4303414
+  ],
+  "Sonarundi": null,
+  "Sondalia Bablatala": null,
+  "Sondalia Station": [
+    22.6818162,
+    88.5823002
+  ],
+  "Sorai": null,
+  "South Bishnupur": null,
+  "South City": [
+    22.5017,
+    88.3617
+  ],
+  "Southern Avenue": null,
+  "Sovabazar": [
+    22.5975289,
+    88.3549336
+  ],
+  "Sreebhumi": [
+    22.7989026,
+    88.3778104
+  ],
+  "Sreepally": [
+    22.7828942,
+    88.371713
+  ],
+  "Srichanda": null,
+  "Stadium Island": null,
+  "State Garage": [
+    22.5147646,
+    88.3056248
+  ],
+  "Subarnapur": null,
+  "Subhash Colony": [
+    22.4704666,
+    88.3695264
+  ],
+  "Subhash Sarovar": null,
+  "Subidpur": null,
+  "Sugandha": [
+    22.9069296,
+    88.3330095
+  ],
+  "Sujapur": null,
+  "Sukanta Park": [
+    22.6968847,
+    88.4513198
+  ],
+  "Sukantanagar": [
+    22.5603591,
+    88.4162023
+  ],
+  "Sukea Street": [
+    22.5816,
+    88.3742
+  ],
+  "Sulekha": [
+    22.4913329,
+    88.3726649
+  ],
+  "Sultannagar": null,
+  "Sundarpur": null,
+  "Sunderban Chowmatha": null,
+  "Sundia": [
+    22.4377284,
+    88.537862
+  ],
+  "Sunukpahari": null,
+  "Sureshwar Shiv Mandir": null,
+  "Suri": [
+    22.5637907,
+    88.366082
+  ],
+  "Surkikal": null,
+  "Surulia": null,
+  "Suryasen Nagar": [
+    22.6724558,
+    88.2906828
+  ],
+  "Suryasen Street": null,
+  "Sushrut Hospital": null,
+  "Sutahata": null,
+  "Sutia": null,
+  "Swabhumi": [
+    22.5710909,
+    88.4012506
+  ],
+  "Swaminarayan Temple": null,
+  "Swarupnagar": null,
+  "Swastha Bhawan": null,
+  "Swasthya Bhawan": [
+    22.5706379,
+    88.426408
+  ],
+  "Taki": [
+    22.5733065,
+    88.3727458
+  ],
+  "Taki Chowrangee": null,
+  "Taldangra": null,
+  "Taldi": null,
+  "Talit": null,
+  "Talit Rail Gate": null,
+  "Tangra": [
+    22.5565107,
+    88.3795946
+  ],
+  "Tantipara": null,
+  "Tantirhat": null,
+  "Tapan": [
+    22.5115939,
+    88.3450563
+  ],
+  "Taragunia": null,
+  "Tarahat": null,
+  "Tarakeshwar": null,
+  "Tarakeswar": null,
+  "Taranipur": null,
+  "Tarapith": null,
+  "Tarar": null,
+  "Taratala": [
+    22.516,
+    88.312
+  ],
+  "Tarulia": [
+    22.5875309,
+    88.4386567
+  ],
+  "Taruliahat": null,
+  "Tata Cancer Hospital": null,
+  "Tata Medical": [
+    22.576353,
+    88.4791145
+  ],
+  "Tatanagar": null,
+  "Techno India": [
+    22.5786848,
+    88.4760053
+  ],
+  "Technopolis": [
+    22.5797115,
+    88.4378814
+  ],
+  "Teghari": [
+    22.4436574,
+    88.4180908
+  ],
+  "Teghoria": [
+    22.6301202,
+    88.4338489
+  ],
+  "Tehatta": [
+    22.5268148,
+    88.0963994
+  ],
+  "Telipukur": null,
+  "Tematha": [
+    22.8450006,
+    88.3629024
+  ],
+  "Temathani": null,
+  "Tentulia": null,
+  "Tentulia Bazar": null,
+  "Tentulmuri": null,
+  "Thakdari": [
+    22.5687823,
+    88.4570235
+  ],
+  "Thakurpukur": [
+    22.467,
+    88.305
+  ],
+  "Thakurpukur 3A": [
+    22.4625369,
+    88.3155256
+  ],
+  "Thakurpukur 3A Bus Stand": null,
+  "Thakurpukur Bazar": null,
+  "Thanapara": null,
+  "Tikiapara": [
+    22.598577,
+    88.324035
+  ],
+  "Tikiapara Bypass": null,
+  "Tilpara": null,
+  "Tinkonia": null,
+  "Titagarh": [
+    22.7419198,
+    88.379201
+  ],
+  "Tobin Road": [
+    22.6383356,
+    88.3759051
+  ],
+  "Toll Tax": null,
+  "Tollygunge": [
+    22.501,
+    88.346
+  ],
+  "Tollygunge Karunamoyee": null,
+  "Tollygunge Metro": null,
+  "Tollygunge Phari": [
+    22.502,
+    88.35
+  ],
+  "Tona": [
+    22.6120711,
+    88.5641283
+  ],
+  "Topsia": [
+    22.5329913,
+    88.396456
+  ],
+  "Town Hall Para": null,
+  "Tribeni": [
+    22.990303,
+    88.3982606
+  ],
+  "Trilokchandrapur": null,
+  "Trimohini": null,
+  "Tulin": null,
+  "Tulshiberia": null,
+  "Tulsighata": null,
+  "Uchalan": null,
+  "Udang Bazar": null,
+  "Udaynarayanpur": null,
+  "Udbadal": null,
+  "Uem Campus": null,
+  "Ukhra": null,
+  "Ukilerhat": null,
+  "Ultadanga": [
+    22.591,
+    88.399
+  ],
+  "Ultadanga Hudco": null,
+  "Uluberia": [
+    22.4700318,
+    88.1011108
+  ],
+  "Uluberia Bypass": null,
+  "Uluberia Checkpost": null,
+  "Unitech Gate 1": [
+    22.5750533,
+    88.4830586
+  ],
+  "Unitech Gate 2": [
+    22.5750533,
+    88.4830586
+  ],
+  "Usthi": null,
+  "Uttar Chandipur": null,
+  "Uttar Panchannagram": null,
+  "Uttar Ramkrishnapur": null,
+  "Uttar Ramnagar": null,
+  "Uttar Sonakhali": null,
+  "Uttarbhag": [
+    22.3636875,
+    88.5203336
+  ],
+  "Uttarbill": null,
+  "Uttarpara": [
+    22.6670459,
+    88.3411458
+  ],
+  "VIP Bazar": [
+    22.5246847,
+    88.3962331
+  ],
+  "VIP Road": [
+    22.5922,
+    88.3895
+  ],
+  "Vastara": null,
+  "Vedic Village": [
+    22.6051871,
+    88.5287523
+  ],
+  "Vidyasagar Setu": null,
+  "Vivekananda Road": [
+    22.5849935,
+    88.3758604
+  ],
+  "Webel": [
+    22.5699956,
+    88.4364653
+  ],
+  "Wellington": [
+    22.563,
+    88.359
+  ],
+  "Westin": [
+    22.5922529,
+    88.4752122
+  ],
+  "Wipro": [
+    22.5791957,
+    88.4307678
+  ],
+  "Wireless": [
+    22.4819811,
+    88.347259
+  ],
+  "Bidhannagar Road": [
+    22.5917787,
+    88.3907817
+  ],
+  "Biswa Bangla Gate": [
+    22.5786355,
+    88.4720939
+  ],
+  "Candor Techspace": null,
+  "Chetla": [
+    22.5143251,
+    88.3369583
+  ],
+  "CMRI Hospital": null,
+  "Dharmatala": [
+    22.5606093,
+    88.3531662
+  ],
+  "Exide More": [
+    22.5426106,
+    88.3478914
+  ],
+  "Hazra More": null,
+  "Hudco": [
+    22.5900243,
+    88.3933015
+  ],
+  "Lake Town": [
+    22.6057276,
+    88.4029611
+  ],
+  "Mint": [
+    22.5159671,
+    88.3229547
+  ],
+  "Panihati": [
+    22.6950342,
+    88.4073585
+  ],
+  "PG": [
+    22.5374842,
+    88.360886
+  ],
+  "Prince Anwar Shah Connector": [
+    22.5030565,
+    88.3680799
+  ],
+  "RDB Cinema": [
+    22.5686412,
+    88.4330725
+  ],
+  "TCS Gitobitan": [
+    22.578313,
+    88.430312
+  ],
+  "Topsia More": null,
+  "Yuba Bharati Krirangan": [
+    22.5690604,
+    88.4090201
+  ],
+  "Yuva Bharati Kirangan": null,
+  "Yuva Bharati Krirangan": null
+}
