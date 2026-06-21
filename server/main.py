@@ -78,7 +78,7 @@ def evaluate_leg_static(bus_no: str, boarding_stop: str, alighting_stop: str):
     journey_sec = distance_journey / speed_mps
     num_stops_journey = idx_alight - idx_board
     journey_buffer_sec = num_stops_journey * 45
-    journey_min = math.ceil(((journey_sec + journey_buffer_sec) / 60) * 1.6)
+    journey_min = math.ceil(((journey_sec + journey_buffer_sec) / 60) * 3.0)
     journey_min = max(1, journey_min)
     
     # Fare: minimum 10 Rs, max 20 Rs based on stop count
@@ -186,7 +186,7 @@ def evaluate_leg(bus_no: str, boarding_stop: str, alighting_stop: str):
     journey_sec = distance_journey / speed_mps
     num_stops_journey = idx_alight - idx_board
     journey_buffer_sec = num_stops_journey * 45
-    journey_min = math.ceil(((journey_sec + journey_buffer_sec) / 60) * 1.6)
+    journey_min = math.ceil(((journey_sec + journey_buffer_sec) / 60) * 3.0)
     journey_min = max(1, journey_min)
     
     # Fare: minimum 10 Rs, max 20 Rs based on stop count
