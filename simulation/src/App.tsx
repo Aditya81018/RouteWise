@@ -104,6 +104,11 @@ export default function App() {
   const [selectedBus, setSelectedBus] = useState<BusRoute | null>(null)
   const busDropdownRef = useRef<HTMLDivElement>(null)
 
+  // WebSocket and sync state/refs
+  const [isConnected, setIsConnected] = useState<boolean>(false)
+  const wsRef = useRef<WebSocket | null>(null)
+  const lastSentBusesRef = useRef<Record<string, AnimatedLiveBus>>({})
+
   const [osrmRoutePoints, setOsrmRoutePoints] = useState<[number, number][]>([])
   const [isRouting, setIsRouting] = useState<boolean>(false)
 
@@ -365,6 +370,159 @@ export default function App() {
 
     return () => clearInterval(interval)
   }, [timeScale])
+
+  // Connect to WebSocket server on mount
+  useEffect(() => {
+    let ws: WebSocket | null = null
+    let reconnectTimeout: ReturnType<typeof setTimeout>
+
+    const connect = () => {
+      console.log("Connecting to WebSocket server...")
+      const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:8000"
+      const WS_URL = SERVER_URL.replace(/^http/, "ws") + "/ws"
+      
+      ws = new WebSocket(WS_URL)
+      wsRef.current = ws
+
+      ws.onopen = () => {
+        console.log("Connected to WebSocket server")
+        setIsConnected(true)
+      }
+
+      ws.onclose = () => {
+        console.log("Disconnected from WebSocket. Reconnecting in 3s...")
+        setIsConnected(false)
+        lastSentBusesRef.current = {}
+        reconnectTimeout = setTimeout(connect, 3000)
+      }
+
+      ws.onerror = (err) => {
+        console.error("WebSocket error:", err)
+        ws?.close()
+      }
+    };
+
+    connect()
+
+    return () => {
+      if (ws) {
+        ws.onclose = null
+        ws.close()
+      }
+      clearTimeout(reconnectTimeout)
+    }
+  }, [])
+
+  // Synchronize live buses with the backend server via WebSocket
+  useEffect(() => {
+    if (!isConnected) return
+
+    const ws = wsRef.current
+    if (!ws || ws.readyState !== WebSocket.OPEN) return
+
+    const lastSent = lastSentBusesRef.current
+    const currentBusIds = new Set(liveBuses.map((b) => b.id))
+
+    // 1. Send deletes/removes for buses that are no longer in state
+    Object.keys(lastSent).forEach((id) => {
+      if (!currentBusIds.has(id)) {
+        try {
+          ws.send(
+            JSON.stringify({
+              id,
+              action: "delete",
+            })
+          )
+        } catch (e) {
+          console.error("Error sending delete event", e)
+        }
+        delete lastSent[id]
+      }
+    })
+
+    // 2. Scan live buses and send either full payloads (first time) or updates
+    liveBuses.forEach((bus) => {
+      const prevBus = lastSent[bus.id]
+
+      if (!prevBus) {
+        // First-time broadcast: send everything including route (stopsSequence)
+        const fullPayload = {
+          id: bus.id,
+          is_first_time: true,
+          routeCode: bus.routeCode,
+          currentStop: bus.currentStop,
+          direction: bus.direction,
+          color: bus.color,
+          crowdStatus: bus.crowdStatus,
+          reliability: bus.reliability,
+          speed: bus.speed,
+          currentCoords: bus.currentCoords,
+          nextStopIndex: bus.nextStopIndex,
+          stopsSequence: bus.stopsSequence,
+        }
+        try {
+          ws.send(JSON.stringify(fullPayload))
+          lastSent[bus.id] = JSON.parse(JSON.stringify(bus))
+        } catch (e) {
+          console.error("Error sending initial bus data", e)
+        }
+      } else {
+        // Subsequent broadcasts: compare fields and send only changed values
+        const diff: Record<string, any> = {}
+        let hasChanges = false
+
+        if (bus.currentStop !== prevBus.currentStop) {
+          diff.currentStop = bus.currentStop
+          hasChanges = true
+        }
+        if (bus.direction !== prevBus.direction) {
+          diff.direction = bus.direction
+          hasChanges = true
+        }
+        if (bus.color !== prevBus.color) {
+          diff.color = bus.color
+          hasChanges = true
+        }
+        if (bus.crowdStatus !== prevBus.crowdStatus) {
+          diff.crowdStatus = bus.crowdStatus
+          hasChanges = true
+        }
+        if (bus.reliability !== prevBus.reliability) {
+          diff.reliability = bus.reliability
+          hasChanges = true
+        }
+        if (bus.speed !== prevBus.speed) {
+          diff.speed = bus.speed
+          hasChanges = true
+        }
+        if (
+          bus.currentCoords[0] !== prevBus.currentCoords[0] ||
+          bus.currentCoords[1] !== prevBus.currentCoords[1]
+        ) {
+          diff.currentCoords = bus.currentCoords
+          hasChanges = true
+        }
+        if (bus.nextStopIndex !== prevBus.nextStopIndex) {
+          diff.nextStopIndex = bus.nextStopIndex
+          hasChanges = true
+        }
+
+        if (hasChanges) {
+          const updatePayload = {
+            id: bus.id,
+            is_first_time: false,
+            ...diff,
+          }
+          try {
+            ws.send(JSON.stringify(updatePayload))
+            lastSent[bus.id] = JSON.parse(JSON.stringify(bus))
+          } catch (e) {
+            console.error("Error sending updated bus data", e)
+          }
+        }
+      }
+    })
+  }, [liveBuses, isConnected])
 
   useEffect(() => {
     let isMounted = true

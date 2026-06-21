@@ -23,6 +23,7 @@ export interface RouteOptionData {
   tagType?: "RECOMMENDED" | "FASTEST" | "CALMEST" | "CHEAPEST" // Upgraded tag configuration type
   crowdStatus: "LOW" | "MEDIUM" | "HIGH"
   additionalInfo?: string
+  isAvailable?: boolean
 }
 
 interface RouteOptionCardProps extends RouteOptionData {
@@ -42,6 +43,7 @@ export function RouteOptionCard({
   tagType,
   crowdStatus,
   additionalInfo,
+  isAvailable = true,
   isSelected,
   onSelect,
 }: RouteOptionCardProps) {
@@ -106,16 +108,26 @@ export function RouteOptionCard({
 
   return (
     <div
-      onClick={() => onSelect(id)}
+      onClick={() => isAvailable !== false && onSelect(id)}
       className={cn(
         "relative flex w-full cursor-pointer flex-col gap-4 rounded-4xl border border-transparent p-5 transition-all duration-300 select-none",
-        isSelected
+        isAvailable === false
+          ? "bg-secondary/20 text-foreground/40 opacity-40 cursor-not-allowed dark:bg-secondary/5"
+          : isSelected
           ? "scale-[1.01] bg-white opacity-100 shadow-xl shadow-black/5 dark:bg-zinc-900 dark:shadow-black/30"
           : "bg-secondary/40 text-foreground/70 opacity-60 hover:opacity-85 dark:bg-secondary/10"
       )}
     >
       {/* Smart Render Pill Badge Area */}
-      {tagConfig && TagIcon && (
+      {isAvailable === false ? (
+        <span
+          className={cn(
+            "absolute -top-3 right-8 inline-flex items-center gap-1.5 rounded-full px-4 py-1 text-[10px] font-black tracking-widest uppercase shadow-md sm:text-xs bg-red-600 text-white shadow-red-600/15"
+          )}
+        >
+          Unavailable
+        </span>
+      ) : tagConfig && TagIcon && (
         <span
           className={cn(
             "absolute -top-3 right-8 inline-flex items-center gap-1.5 rounded-full px-4 py-1 text-[10px] font-black tracking-widest uppercase shadow-md sm:text-xs",
@@ -135,7 +147,9 @@ export function RouteOptionCard({
           <div
             className={cn(
               "flex size-12 shrink-0 items-center justify-center rounded-full transition-colors",
-              isSelected
+              isAvailable === false
+                ? "bg-zinc-500/10 text-zinc-500 dark:bg-zinc-500/20 dark:text-zinc-400"
+                : isSelected
                 ? "bg-blue-500/10 text-blue-500 dark:bg-blue-500/20 dark:text-blue-400"
                 : "bg-red-500/10 text-red-500 dark:bg-red-500/20 dark:text-red-400"
             )}
@@ -155,7 +169,7 @@ export function RouteOptionCard({
             </div>
 
             <p className="text-xs font-semibold text-muted-foreground">
-              Arrives {arrivalTime}
+              {isAvailable !== false ? `Arrives ${arrivalTime}` : "No active bus"}
             </p>
 
             {transferStop && (
@@ -178,12 +192,14 @@ export function RouteOptionCard({
           <div
             className={cn(
               "mt-1 block text-xs font-bold",
-              reliabilityScore >= 90
+              isAvailable === false
+                ? "text-red-500 dark:text-red-400"
+                : reliabilityScore >= 90
                 ? "text-green-600 dark:text-green-400"
                 : "text-muted-foreground"
             )}
           >
-            Reliability: {reliabilityScore}%
+            {isAvailable !== false ? `Reliability: ${reliabilityScore}%` : "Offline"}
           </div>
         </div>
       </div>
@@ -194,32 +210,41 @@ export function RouteOptionCard({
         <div
           className={cn(
             "inline-flex items-center gap-2 rounded-full px-2 py-1 text-[0.625rem] font-extrabold tracking-wider uppercase",
-            crowdConfig.bg,
-            crowdConfig.text
+            isAvailable === false ? "bg-red-500/10 text-red-500 dark:bg-red-500/20" : crowdConfig.bg,
+            isAvailable === false ? "text-red-600 dark:text-red-400" : crowdConfig.text
           )}
         >
-          <span className={cn("size-2 rounded-full", crowdConfig.dot)} />
-          {crowdConfig.label}
+          <span className={cn("size-2 rounded-full", isAvailable === false ? "bg-red-500" : crowdConfig.dot)} />
+          {isAvailable === false ? "Unavailable" : crowdConfig.label}
         </div>
 
         {/* Custom Direction Button */}
-        <button
-          onClick={handleViewDirections}
-          className={cn(
-            "inline-flex h-10 items-center gap-1.5 rounded-full px-4 text-left text-xs font-extrabold tracking-wider uppercase transition-all",
-            isSelected
-              ? "bg-blue-500/10 text-blue-500 hover:bg-blue-500/20"
-              : "bg-blue-500/5 text-blue-400 hover:bg-blue-500/10"
-          )}
-        >
-          <ArrowUpRight className="size-4 stroke-[2.5]" />
-          View Directions
-        </button>
+        {isAvailable !== false ? (
+          <button
+            onClick={handleViewDirections}
+            className={cn(
+              "inline-flex h-10 items-center gap-1.5 rounded-full px-4 text-left text-xs font-extrabold tracking-wider uppercase transition-all",
+              isSelected
+                ? "bg-blue-500/10 text-blue-500 hover:bg-blue-500/20"
+                : "bg-blue-500/5 text-blue-400 hover:bg-blue-500/10"
+            )}
+          >
+            <ArrowUpRight className="size-4 stroke-[2.5]" />
+            View Directions
+          </button>
+        ) : (
+          <span className="inline-flex h-10 items-center gap-1.5 rounded-full px-4 text-xs font-extrabold tracking-wider uppercase text-red-500 bg-red-500/5 dark:text-red-400 dark:bg-red-500/10">
+            No Live Bus
+          </span>
+        )}
       </div>
 
       {/* Additional Alert Details Banner */}
       {additionalInfo && (
-        <div className="flex animate-in items-center gap-2 border-t border-dashed border-border pt-3 pl-1 text-amber-600 duration-200 fade-in slide-in-from-top-1 dark:text-amber-400">
+        <div className={cn(
+          "flex animate-in items-center gap-2 border-t border-dashed border-border pt-3 pl-1 duration-200 fade-in slide-in-from-top-1",
+          isAvailable === false ? "text-red-500 dark:text-red-400" : "text-amber-600 dark:text-amber-400"
+        )}>
           <Info className="size-4 shrink-0 stroke-[2.5]" />
           <p className="text-xs font-bold tracking-wide">{additionalInfo}</p>
         </div>
