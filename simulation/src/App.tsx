@@ -586,6 +586,11 @@ export default function App() {
               <span>{bus.direction}</span>
             </div>
             <div 
+              onClick={() => {
+                handleSelectLiveBus(bus)
+                setUserLocation([bus.currentCoords[1], bus.currentCoords[0]])
+                setActiveTab("live")
+              }}
               className={cn(
                 "flex h-7 w-7 cursor-pointer items-center justify-center rounded-full border-2 border-white shadow-lg transition-transform",
                 isSelected && "scale-125 z-[1000]"
